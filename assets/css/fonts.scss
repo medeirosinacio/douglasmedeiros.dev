@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../fonts/poppins/Poppins-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: "Poppins-ExtraBold";
+  src: url(../fonts/poppins/Poppins-ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: "Avenir LT 35 Light";
+  src: url("../fonts/Avenir LT 35 Light.ttf") format('truetype');
+}
+
+.font-Avenir-LT-Light{
+  font-family: "Avenir LT 35 Light", var(--bs-font-sans-serif);
+}
+
+
+.font-Poppins-Bold{
+  font-family: "Poppins-Bold", var(--bs-font-sans-serif);
+}
+
+.font-Poppins-ExtraBold{
+  font-family: "Poppins-ExtraBold", var(--bs-font-sans-serif);
+}

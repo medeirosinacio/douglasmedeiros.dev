@@ -1,59 +1,34 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark py-4">
     <div class="container px-sm-5">
-        <a class="navbar-brand" href="/">
-            <img src="{{ site.srcurl }}{{ site.image_path }}logo/logo.svg" alt="" width="30" height="25"
-                 class="d-inline-block align-text-top mx-1">
-            {{ site.title }}
+        <a class="navbar-brand" href="{{ site.srcurl }}/" title="Página inicial">
+            <img src="{{ site.srcurl }}{{ site.image_path }}logo/logo.svg" alt="Logo" width="15"
+                 class="d-inline-block align-middle">
+            <b class="fs-3 align-middle font-Poppins-ExtraBold">{{ site.author }}</b>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <small class="logo-subtitle fs-6 text-uppercase font-Avenir-LT-Light">/&nbsp;Desenvolvedor</small>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ site.srcurl }}/">
-                        <h2 class="text-inherit">Home</h2>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ site.srcurl }}/blog">
-                        <h2 class="text-inherit">Blog</h2>
-                    </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        + Exemplos de Páginas
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                        {% for post in site.posts limit:1 %}
-                        <li>
-                            <a class="dropdown-item" href="{{ site.srcurl }}{{ post.url }}">
-                                <h2 class="text-inherit">Artigo do Blog</h2>
-                            </a>
-                        </li>
-                        {% endfor %}
-                        <li><a class="dropdown-item" href="{{ site.srcurl }}/404">
-                            <h2 class="text-inherit">404</h2>
-                        </a>
-                        </li>
-                        <li><a class="dropdown-item" href="{{ site.srcurl }}/sobre">
-                            <h2 class="text-inherit">Sobre</h2>
-                        </a>
-                        </li>
-                        <li><a class="dropdown-item" href="{{ site.srcurl }}/contato">
-                            <h2 class="text-inherit">Contato</h2>
-                        </a>
-                        </li>
-                        <li><a class="dropdown-item" href="{{ site.srcurl }}/faq">
-                            <h2 class="text-inherit">FAQ</h2>
-                        </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+<!--            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 font-Avenir-LT-Light" style="font-size: 0.93em !important; margin: 15px 0">-->
+<!--                <li class="nav-item active">-->
+<!--                    <a class="nav-link" href="{{ site.srcurl }}/sobre">-->
+<!--                        <h2 class="text-inherit text-uppercase">Sobre</h2>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="{{ site.srcurl }}/projetos">-->
+<!--                        <h2 class="text-inherit text-uppercase">Projetos</h2>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="{{ site.srcurl }}/contato">-->
+<!--                        <h2 class="text-inherit text-uppercase">Contato</h2>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="{{ site.srcurl }}/blog">-->
+<!--                        <h2 class="text-inherit text-uppercase">Blog</h2>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--            </ul>-->
         </div>
     </div>
 </nav>
