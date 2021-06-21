@@ -5,6 +5,7 @@
     {%if paginator and paginator.page != 1 %} <title> {{ page.title }} - Página {{ paginator.page }} | {{ site.title }} </title>{% endif %}
     {% seo %}
     <link rel="stylesheet" href="{{ site.srcurl }}{{ site.css_path }}main.css">
+    {%if page.stylesheet %} <link rel="stylesheet" href="{{ site.srcurl }}{{ page.stylesheet }}"> {% endif %}
     <link rel="icon" type="image/x-icon" href="{{ site.srcurl }}/favicon.ico">
     <!--[if IE]>
     <link rel="shortcut icon" href="{{ site.srcurl }}/favicon.ico"><![endif]-->
