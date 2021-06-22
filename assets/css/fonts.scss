@@ -65,3 +65,12 @@
 .font-Poppins-SemiBold {
   font-family: "Poppins-SemiBold", var(--bs-font-sans-serif);
 }
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf") format('truetype');
+}
+
+.font-Roboto-Regular {
+  font-family: "Roboto Regular", var(--bs-font-sans-serif);
+}
