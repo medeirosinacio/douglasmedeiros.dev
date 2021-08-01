@@ -74,3 +74,39 @@
 .font-Roboto-Regular {
   font-family: "Roboto Regular", var(--bs-font-sans-serif);
 }
+
+@font-face {
+  font-family: "Hind Regular";
+  src: url("../fonts/hind/Hind-Regular.ttf") format('truetype');
+}
+
+.font-Hind-Regular {
+  font-family: "Hind Regular", var(--bs-font-sans-serif);
+}
+
+@font-face {
+  font-family: "Hind Medium";
+  src: url("../fonts/hind/Hind-Medium.ttf") format('truetype');
+}
+
+.font-Hind-Medium {
+  font-family: "Hind Medium", var(--bs-font-sans-serif);
+}
+
+@font-face {
+  font-family: "Hind SemiBold";
+  src: url("../fonts/hind/Hind-SemiBold.ttf") format('truetype');
+}
+
+.font-Hind-SemiBold {
+  font-family: "Hind SemiBold", var(--bs-font-sans-serif);
+}
+
+@font-face {
+  font-family: "Hind Bold";
+  src: url("../fonts/hind/Hind-Bold.ttf") format('truetype');
+}
+
+.font-Hind-Bold {
+  font-family: "Hind Bold", var(--bs-font-sans-serif);
+}

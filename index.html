@@ -1,43 +1,25 @@
 ---
 layout: default
+title: Home
 ---
-
-<!-- Header-->
-<header class="py-5">
+<div class="bg-home-gif"></div>
+<main class="h-100 py-5">
+    <br>
+    <br>
     <div class="container px-5">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="card bg-dark">
-                    <div class="card-body text-center">
-                        <h5 class="card-title font-Avenir-LT-Light my-4 text-uppercase">Preto Minimalista</h5>
-                        <a href="{{site.srcurl}}layout/minimalist-black/" class="btn btn-secondary mb-3">Demo</a>
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="jumbotron d-flex align-items-center" style="height: 65vh">
+                <div class="container text-center">
+                    <div class="avatar mx-auto mb-4">
+                        <img src="{{ site.srcurl }}{{ site.image_path }}/avatar.jpg" class="rounded-circle img-fluid"/>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card bg-dark">
-                    <div class="card-body text-center">
-                        <h5 class="card-title font-Avenir-LT-Light my-4 text-uppercase">Enterprise</h5>
-                        <a href="{{site.srcurl}}layout/enterprise/" class="btn btn-secondary mb-3">Demo</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card bg-dark">
-                    <div class="card-body text-center">
-                        <h5 class="card-title font-Avenir-LT-Light my-4 text-uppercase">Enterprise v2</h5>
-                        <a href="{{site.srcurl}}layout/enterprise-2/" class="btn btn-secondary mb-3">Demo</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card bg-dark">
-                    <div class="card-body text-center">
-                        <h5 class="card-title font-Avenir-LT-Light my-4 text-uppercase">Calvino</h5>
-                        <a href="{{site.srcurl}}layout/calvino/" class="btn btn-secondary mb-3">Demo</a>
-                    </div>
+                    <h2 class="fs-2 font-Hind-SemiBold text-white"
+                        style="font-size: 3rem !important;">
+                        Eai, Sou {{ site.author }}
+                    </h2>
+                    <p class="fs-4 text-white-50 font-Hind-Regular">Desenvolvedor de Software</p>
                 </div>
             </div>
         </div>
     </div>
-</header>
+</main>
