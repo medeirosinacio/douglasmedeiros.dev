@@ -13,6 +13,20 @@
   opacity: 0.5;
 }
 
+@include media-breakpoint-down(md) {
+  .bg-home-gif {
+    background-position: right;
+    background-position-x: 75%;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .bg-home-gif {
+    background-position: right;
+    background-position-x: 65%;
+  }
+}
+
 main {
   height: 100vh;
   opacity: 0;
@@ -52,15 +66,32 @@ main .container {
   animation-fill-mode: none;
 }
 
+.typeText {
+  opacity: 0;
+  -moz-animation: show-in 0s ease-in 5s forwards;
+  -webkit-animation: show-in 0s ease-in 5s forwards;
+  -o-animation: show-in 0s ease-in 5s forwards;
+  animation: show-in 0s ease-in 5s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
 .typeText::after {
   content: "|";
   animation: blink 1.3s infinite;
 }
 
+.home-social-links-media{
+  height: 40px;
+  text-align: center;
+}
+
 .home-social-links-media a{
-  display: block;
-  margin: 15px 0;
-  opacity: 0.8;
+  opacity: 0.5;
+  margin: 0.12em;
+  @extend .link-light;
+  @extend .text-reset;
+  @extend .text-decoration-none;
 }
 
 .home-social-links-media a:hover{
@@ -70,7 +101,6 @@ main .container {
 .home-social-links-media span{
   width: 30px;
   height: 30px;
-  background-color: white;
   display: table-cell;
   border-radius: 50%;
   vertical-align: middle;
@@ -78,7 +108,8 @@ main .container {
 }
 
 .home-social-links-media span i{
-  color: #000 !important;
+  color: #b3b3b3 !important;
+  font-size: 1.25em !important;
 }
 
 @keyframes blink {
@@ -88,13 +119,20 @@ main .container {
 
 @keyframes focus-in {
   0% {
+    font-size: 0.05em;
     letter-spacing: 0.2em;
     filter: blur(12px);
     opacity: 0;
   }
+  90% {
+    filter: blur(0);
+    opacity: 0.9;
+    font-size: 0.07em;
+  }
   100% {
     filter: blur(0);
     opacity: 1;
+    font-size: inherit;
   }
 }
 
@@ -116,10 +154,15 @@ main .container {
     transform: translateY(-10px);
     opacity: 0;
   }
+  50%{
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    opacity: 0.8;
+  }
   100%{
     -webkit-transform: translateY(0);
     transform: translateY(0);
-    opacity: 0.8;
+    opacity: 0;
   }
 }
 
