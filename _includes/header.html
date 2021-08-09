@@ -1,0 +1,28 @@
+<header id="header" class="w-100 py-2 bg-dark">
+    <div class="container">
+        <table class="table-reset logo float-start">
+            <tbody>
+            <tr>
+                <td>
+                    <a href="/" title="Home">
+                        <img src="{{ site.srcurl }}{{ site.image_path }}logo/logo.svg" alt="Logo" width="15">
+                    </a>
+                </td>
+                <td class="fs-5 font-Poppins-ExtraBold">
+                    <a class="text-reset text-decoration-none" title="Home" href="/">Douglas Medeiros</a>
+                    <small class="logo-subtitle text-uppercase font-Avenir-LT-Light">&nbsp;&nbsp;/&nbsp;{{ page.title | default: 'Desenvolvedor'}}</small>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="menu float-end">
+            <div class="menu-icon">
+                <input class="menu-icon__cheeckbox" type="checkbox" />
+                <div>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

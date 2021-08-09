@@ -1,0 +1,84 @@
+<script>
+    const base_url = 'https://api.github.com';
+
+    function setCache(c_name, value, exdays = 0) {
+        let xmlHttp = new XMLHttpRequest();
+        let cookie = getCache(c_name)
+        if (cookie === null) {
+            xmlHttp.open('GET',
+                "https://api.countapi.xyz/create?update_upperbound=10000&key=" + c_name + "&namespace=medeirosinacio&value=" + value);
+            xmlHttp.send(null);
+            return;
+        }
+
+        xmlHttp.open('GET',
+            "https://api.countapi.xyz/update/medeirosinacio/" + c_name + "?amount=" + (value - cookie));
+        xmlHttp.send(null);
+
+    }
+
+    function getCache(c_name) {
+        let response = JSON.parse(httpGet("https://api.countapi.xyz/info/medeirosinacio/" + c_name));
+        return response.value;
+    }
+
+    function httpGet(theUrl, return_headers) {
+        let xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", theUrl, false);
+        xmlHttp.send(null);
+        if (return_headers) {
+            return xmlHttp
+        }
+        return xmlHttp.responseText;
+    }
+
+    function get_all_commits_count(owner, repo, sha) {
+        let first_commit = get_first_commit(owner, repo);
+        let compare_url = base_url + '/repos/' + owner + '/' + repo + '/compare/' + first_commit + '...' + sha;
+        let commit_req = httpGet(compare_url);
+        let commit_count = JSON.parse(commit_req)['total_commits'] + 1;
+        return commit_count
+    }
+
+    function get_first_commit(owner, repo) {
+        let url = base_url + '/repos/' + owner + '/' + repo + '/commits';
+        let req = httpGet(url, true);
+        let first_commit_hash = '';
+        if (req.getResponseHeader('Link')) {
+            let page_url = req.getResponseHeader('Link').split(',')[1].split(';')[0].split('<')[1].split('>')[0];
+            let req_last_commit = httpGet(page_url);
+            let first_commit = JSON.parse(req_last_commit);
+            first_commit_hash = first_commit[first_commit.length - 1]['sha']
+        } else {
+            let first_commit = JSON.parse(req.responseText);
+            first_commit_hash = first_commit[first_commit.length - 1]['sha'];
+        }
+        return first_commit_hash;
+    }
+
+    function get_all_commits_count_from_all_repos(owner) {
+
+
+        if (getCache('commit-count-medeirosinacio')) {
+            return getCache('commit-count-medeirosinacio');
+        }
+
+        let url = base_url + '/users/' + owner + '/repos';
+        let repos = JSON.parse(httpGet(url));
+        let count = 0;
+
+        if (repos[0] === undefined) {
+            setCache('commit-count-medeirosinacio', 0, '1');
+            return 0;
+        }
+
+        for (let repo of repos) {
+            count = count + get_all_commits_count(owner, repo.name, repo.default_branch);
+        }
+
+        setCache('commit-count-medeirosinacio', count, '1');
+        return count;
+    }
+
+    console.log(get_all_commits_count_from_all_repos('medeirosinacio'));
+</script>
