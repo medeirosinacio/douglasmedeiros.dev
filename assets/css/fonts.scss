@@ -1,112 +1,71 @@
 @font-face {
-  font-family: "Poppins-Bold";
-  src: url(../fonts/poppins/Poppins-Bold.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: "Poppins-ExtraBold";
-  src: url(../fonts/poppins/Poppins-ExtraBold.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: "Poppins-SemiBold";
-  src: url(../fonts/poppins/Poppins-SemiBold.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: "Poppins-Medium";
-  src: url(../fonts/poppins/Poppins-Medium.ttf) format('truetype');
-}
-
-@font-face {
   font-family: "Avenir LT 35 Light";
   src: url("../fonts/Avenir LT 35 Light.ttf") format('truetype');
 }
 
-@font-face {
-  font-family: "Roboto Condensed Regular";
-  src: url("../fonts/Roboto Condensed/RobotoCondensed-Regular.ttf") format('truetype');
-}
-
-
-@font-face {
-  font-family: "Roboto Condensed Bold";
-  src: url("../fonts/Roboto Condensed/RobotoCondensed-Bold.ttf") format('truetype');
-}
-
-.font-RobotoCondensed-Bold {
-  font-family: "Roboto Condensed Bold", var(--bs-font-sans-serif);
-}
-
-
-.font-RobotoCondensed-Regular {
-  font-family: "Roboto Condensed Regular", var(--bs-font-sans-serif);
-}
-
-
 .font-Avenir-LT-Light {
-  font-family: "Avenir LT 35 Light", var(--bs-font-sans-serif);
-}
-
-
-.font-Poppins-Bold {
-  font-family: "Poppins-Bold", var(--bs-font-sans-serif);
-}
-
-
-.font-Poppins-Medium {
-  font-family: "Poppins-Medium", var(--bs-font-sans-serif);
-}
-
-.font-Poppins-ExtraBold {
-  font-family: "Poppins-ExtraBold", var(--bs-font-sans-serif);
-}
-
-.font-Poppins-SemiBold {
-  font-family: "Poppins-SemiBold", var(--bs-font-sans-serif);
-}
-
-@font-face {
-  font-family: "Roboto Regular";
-  src: url("../fonts/Roboto/Roboto-Regular.ttf") format('truetype');
-}
-
-.font-Roboto-Regular {
-  font-family: "Roboto Regular", var(--bs-font-sans-serif);
+  font-family: "Avenir LT 35 Light", var(--bs-font-sans-serif) !important;
 }
 
 @font-face {
   font-family: "Hind Regular";
-  src: url("../fonts/hind/Hind-Regular.ttf") format('truetype');
+  src: url("../fonts/Hind/Hind-Regular.ttf") format('truetype');
 }
 
 .font-Hind-Regular {
-  font-family: "Hind Regular", var(--bs-font-sans-serif);
+  font-family: "Hind Regular", var(--bs-font-sans-serif) !important;
 }
 
 @font-face {
   font-family: "Hind Medium";
-  src: url("../fonts/hind/Hind-Medium.ttf") format('truetype');
+  src: url("../fonts/Hind/Hind-Medium.ttf") format('truetype');
 }
 
 .font-Hind-Medium {
-  font-family: "Hind Medium", var(--bs-font-sans-serif);
+  font-family: "Hind Medium", var(--bs-font-sans-serif) !important;
 }
 
 @font-face {
   font-family: "Hind SemiBold";
-  src: url("../fonts/hind/Hind-SemiBold.ttf") format('truetype');
+  src: url("../fonts/Hind/Hind-SemiBold.ttf") format('truetype');
 }
 
 .font-Hind-SemiBold {
-  font-family: "Hind SemiBold", var(--bs-font-sans-serif);
+  font-family: "Hind SemiBold", var(--bs-font-sans-serif) !important;
 }
 
 @font-face {
   font-family: "Hind Bold";
-  src: url("../fonts/hind/Hind-Bold.ttf") format('truetype');
+  src: url("../fonts/Hind/Hind-Bold.ttf") format('truetype');
 }
 
 .font-Hind-Bold {
-  font-family: "Hind Bold", var(--bs-font-sans-serif);
+  font-family: "Hind Bold", var(--bs-font-sans-serif) !important;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-Medium.ttf") format('truetype');
+}
+
+.font-Lato {
+  font-family: "Lato", var(--bs-font-sans-serif) !important;
+}
+
+@font-face {
+  font-family: "Lato Semibold";
+  src: url("../fonts/Lato/Lato-Semibold.ttf") format('truetype');
+}
+
+.font-Lato-Semibold {
+  font-family: "Lato Semibold", var(--bs-font-sans-serif) !important;
+}
+
+@font-face {
+  font-family: "Lato Bold";
+  src: url("../fonts/Lato/Lato-Bold.ttf") format('truetype');
+}
+
+.font-Lato-Bold {
+  font-family: "Lato bold", var(--bs-font-sans-serif) !important;
 }

@@ -40,19 +40,19 @@ layout: default
 </main>
 
 <section id="sobre" data-is-visualized="false" style="min-height: 85vh"
-         class="home-sobre w-100 w-md d-flex align-items-center justify-content-center text-center bg-light text-dark">
-    <div class="container w-75 margin-header">
+         class="home-sobre w-100 d-flex align-items-center justify-content-center text-center bg-light text-dark">
+    <div class="container w-md-100 margin-header">
         <div class="row align-items-center justify-content-center w-100 px-0 mx-0">
-            <div class="description text-start col-md-6 col-sm-4 col-xs-12 px-lg-5">
-                <h2 class="font-Hind-SemiBold">Olá, Eu sou o <b class="font-Hind-Bold">Douglas</b></h2>
-                <h5 class="py-2">Desenvolvedor e apaixonado por tecnologia</h5>
-                <p> Nascido em 93 na cidade de Porto Alegre, e, caindo de paraquedas na tecnologia a 10 anos atrás,
+            <div class="descricao text-start col-md-12 col-lg-12 col-xl-6 px-lg-5">
+                <h2 class="font-Hind-SemiBold">Olá, Eu sou o <b class="font-Hind-SemiBold">Douglas</b></h2>
+                <h5 class="py-2 font-Lato-Bold">Desenvolvedor e apaixonado por tecnologia</h5>
+                <p> Nascido em 93 na cidade de Porto Alegre, e, caindo de paraquedas na tecnologia há 10 anos atrás,
                     passando desde telecomunicações até sistemas
                     de instituições de ensino. Com experiencias focadas principalmente em <b>PHP</b> e movido por
-                    desafios que me são apresentados,
-                    participei de projetos de infraestrutura, devops, automação, app, mobile, sistemas de gestão
+                    desafios que me são apresentados.
+                    Participei de projetos de infraestrutura, devops, automação, app, mobile, sistemas de gestão
                     empresarial e ERP's... essa mistura de áreas me fizeram ter uma visão ampla de projetos,
-                    conseguindo contribuir soluções diversas a problemas e desafios.
+                    conseguindo contribuir com soluções diversas a problemas e desafios.
                 </p>
                 <p>Melhores práticas de desenvolvimento e <i class="text-decoration-line-through">sempre que
                     possível</i>
@@ -73,41 +73,42 @@ layout: default
                         <span class="mx-1"><i class="bi-linkedin"></i></span>
                     </a>
                 </p>
-                <!--                <p>-->
-                <!--                    <a href="#" class="btn btn-outline-dark rounded-1 shadow me-1">-->
-                <!--                        Download CV-->
-                <!--                    </a>-->
-                <!--                </p>-->
             </div>
 
-            <div class="col-md-5 col-sm-5 col-xs-12 d-flex align-items-center justify-content-center pb-5">
-                <div class="row px-5">
+            <div class="col-md-12 col-lg-12 col-xl-6 px-xl-5 d-flex align-items-center justify-content-center py-5 py-lg-2">
+                <div class="row w-100 px-0 px-lg-4">
 
-                    <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="col-6 col-lg-3 col-xl-6 px-0 px-lg-3">
                         <div class="count-item py-4 text-start font-Hind-SemiBold fs-2">
                             <div class="numscroller" data-number="31">0</div>
-                            <div class="count-name-intro fs-4">Projetos</div>
+                            <div class="count-name-intro">Projetos</div>
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="col-6 col-lg-3 col-xl-6 ">
                         <div class="count-item py-4 text-start font-Hind-SemiBold fs-2">
                             <div class="numscroller" data-number="1474">0</div>
-                            <div class="count-name-intro fs-4">Commits</div>
+                            <div class="count-name-intro">Commits</div>
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-sm-6 col-xs-6">
+                    {% assign today = site.time | date: '%s' %}
+                    {% assign start = '01-11-2012 00:00:00' | date: '%s' %}
+                    {% assign secondsSince = today | minus: start %}
+                    {% assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60 %}
+                    {% assign daysSince = hoursSince | divided_by: 24 %}
+
+                    <div class="col-6 col-lg-3 col-xl-6 px-0 px-lg-3">
                         <div class="count-item py-4 text-start font-Hind-SemiBold fs-2">
-                            <div class="numscroller" data-number="5478">0</div>
-                            <div class="count-name-intro fs-4">Copos de café</div>
+                            <div class="numscroller" data-number="{{ daysSince | times: 1.8 }}">0</div>
+                            <div class="count-name-intro">Copos de café</div>
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="col-6 col-lg-3 col-xl-6 ps-3 ps-lg-5 ps-xl-3">
                         <div class="count-item py-4 text-start font-Hind-SemiBold fs-2">
                             <div class="numscroller" data-number="1">0</div>
-                            <div class="count-name-intro fs-4">Pet</div>
+                            <div class="count-name-intro">Pet</div>
                         </div>
                     </div>
 
@@ -193,14 +194,14 @@ layout: default
 
 <section id="servicos" class="home-servicos w-100 h-100vh align-items-center text-center py-4 bg-semilight text-dark"
          data-is-visualized="false">
-    <div class="container margin-header pb-4 px-md-5 w-75">
-        <div class="row py-lg-5 px-md-5">
+    <div class="container margin-header pb-4 px-lg-5 w-md-100">
+        <div class="row py-lg-5 px-lg-5">
             <div class="col-md-12 text-start">
-                <h2 class="font-Hind-SemiBold">Serviço <b class="font-Hind-Bold">Especializado</b></h2>
+                <h2 class="font-Hind-SemiBold pb-3">Serviço</h2>
             </div>
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-4 col-sm-6">
+                    <div class="col-md-6 col-lg-4">
                         <div class="servico-item">
                             <i class="bi bi-hdd-stack-fill"></i>
                             <h4>Desenvolvedor Back-End</h4>
@@ -208,7 +209,7 @@ layout: default
                                 com implementação de metodologias ágeis.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6">
+                    <div class="col-md-6 col-lg-4">
                         <div class="servico-item">
                             <i class="bi bi-caret-right-fill"></i>
                             <i class="bi bi-caret-right-fill"></i>
@@ -216,21 +217,21 @@ layout: default
                             <p>Desenvolvimento de sistemas integrados para automação de rotinas e processos.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6">
+                    <div class="col-md-6 col-lg-4">
                         <div class="servico-item">
                             <i class="bi bi-file-bar-graph-fill"></i>
                             <h4>Analista</h4>
                             <p>Mapeamento e analise de fluxo de processos para otimização e melhoria de sistemas.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6">
+                    <div class="col-md-6 col-lg-4">
                         <div class="servico-item">
                             <i class="bi bi-signpost-2-fill"></i>
                             <h4>Web Site</h4>
                             <p>Desde blogs com baixo custo até comerciais landpages com domínio e email exclusivo.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6">
+                    <div class="col-md-6 col-lg-4">
                         <div class="servico-item">
                             <i class="bi bi-phone-fill"></i>
                             <h4>Aplicativo</h4>
@@ -238,7 +239,7 @@ layout: default
                                 multiplataformas.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6">
+                    <div class="col-md-6 col-lg-4">
                         <div class="servico-item">
                             <i class="bi bi-asterisk"></i>
                             <h4>Especificidade</h4>
@@ -252,11 +253,112 @@ layout: default
     </div>
 </section>
 
-<footer id="rodape" class="w-100 align-items-center text-center py-4 bg-dark text-light" data-is-visualized="false">
+
+<section id="contato" class="home-contato d-none w-100 h-100vh align-items-center text-center py-4 text-light"
+         data-is-visualized="false">
     <div class="container margin-header pb-4 px-md-5 w-75">
         <div class="row py-lg-5 px-md-5">
-            <div class="col-auto">
-                <div class="small m-0 text-white">Copyright © Douglas Medeiros | 2021</div>
+            <div class="col-md-12 py-5 text-start">
+                <h2 class="font-Hind-SemiBold">Contato</h2>
+            </div>
+            <div class="row">
+                <div class="col-6 text-start pe-5">
+                    <p class="pe-5">
+                        Orçamentos ou propostas
+                        podem ser enviados pelos contatos listados ou formulário, vamos trocar uma ideia e tirar esse projeto do papel.
+                    </p>
+                </div>
+                <div class="col-6">
+                    <form id="staticform" class="staticform bg-dark text-light rounded-1 p-5" onsubmit="handleSubmit(this); return false;">
+
+                        <input type="hidden" id="accessKey" name="accessKey" value="{{ site.staticforms_api_key }}">
+                        <input type="text" name="honeypot" style="display: none;" value="only test">
+                        <input type="hidden" id="subject" name="subject" value="Test jekyll-bootstrap">
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control"
+                                   id="name"
+                                   name="name"
+                                   type="text"
+                                   placeholder="Seu nome..."
+                                   minlength="5"
+                                   maxlength="50" required>
+                            <label for="name">Nome</label>
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" name="email" type="email" required
+                                   placeholder="name@example.com">
+                            <label for="email">E-mail</label>
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <!-- Phone number input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control"
+                                   id="phone"
+                                   name="phone"
+                                   type="tel"
+                                   placeholder="(51) 3456-7890"
+                                   maxlength="15"
+                                   minlength="14"
+                                   onchange="maskTel(this)"
+                                   onkeyup="maskTel(this)"
+                                   onkeypress="maskTel(this)"
+                                   onautocomplete="maskTel(this)"
+                                   required>
+                            <label for="phone">Telefone</label>
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control"
+                                      id="message"
+                                      name="message"
+                                      type="text"
+                                      minlength="10"
+                                      maxlength="250"
+                                      required
+                                      placeholder="Entre com sua mensagem aqui..." style="height: 10rem"></textarea>
+                            <label for="message">Mensagem</label>
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <div class="alert alert-danger d-none" id="submitErrorBox" role="alert">
+                            <div class="text-center text-danger" id="submitErrorMessage"></div>
+                        </div>
+
+                        <!-- Submit Button-->
+                        <div class="d-grid">
+                            <button class="btn btn-secondary btn-lg btn-load-img" type="submit" id="submitFormBtn">
+                                <img src="{{site.srcurl}}/assets/gifs/load_white.gif" class="d-none" height="28">
+                                Enviar
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="rodape" class="w-100 align-items-center text-center py-2 bg-dark text-light" data-is-visualized="false">
+    <div class="container py-4 w-75">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="small m-0 text-white text-center">
+                    © {{ site.time | date: '%Y' }} Douglas Medeiros <br>
+                    <div class="small">
+                        Hospedado gratuitamente ❤ com
+                        <a href="https://pages.github.com/" class="text-decoration-none fw-bold text-reset">
+                            Github Pages
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

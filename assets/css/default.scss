@@ -1,6 +1,7 @@
 body,
 html {
   height: 100%;
+  @extend .font-Lato;
 }
 
 body.bg-dark {
@@ -51,10 +52,12 @@ body.bg-light {
   cursor: pointer;
 }
 
-label
-
 .link-hover-blue:hover {
   @extend .text-primary;
+}
+
+p{
+  font-size: 0.9rem;
 }
 
 // BLOG
@@ -90,7 +93,6 @@ label
 .btn-load-img[disabled] {
   font-size: 0 !important;
 }
-
 
 .btn-load-img:disabled img,
 .btn-load-img[disabled] img {
