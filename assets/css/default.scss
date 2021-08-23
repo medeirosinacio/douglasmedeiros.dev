@@ -57,7 +57,13 @@ body.bg-light {
 }
 
 p{
-  font-size: 0.9rem;
+  font-size: 1rem;
+}
+
+@include media-breakpoint-down(lg) {
+  p{
+    font-size: 0.9rem;
+  }
 }
 
 // BLOG

@@ -211,9 +211,21 @@ section[data-is-visualized="false"] .container {
   opacity: 0;
 }
 
+@include media-breakpoint-down(xxl) {
+  .servico-item{
+    padding: 25px 50px 30px 0;
+  }
+}
+
 @include media-breakpoint-down(lg) {
   .home-sobre .descricao {
     padding-right: 4rem;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .servico-item{
+    padding: 25px 50px 0 0;
   }
 }
 
