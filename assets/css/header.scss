@@ -1,38 +1,50 @@
-// navibar
-
-//nav {
-//  position: fixed !important;
-//  display: none !important;
-//}
-
-//main[data-is-visible="false"] < nav {
-//  display: block !important;
-//}
-
 header {
   position: fixed;
   z-index: 1;
   display: block;
+  opacity: 0.97;
+  color: #0e0e0e;
+  background-color: #fcfcfc;
+  border-bottom: 1px solid #e7e7e7;
 }
 
 header[data-view-menu="false"] {
-  display: none;
+  color: #FFF;
+  background-color: transparent;
+  border-bottom: 0;
+  opacity: 0.5;
+  filter: invert(1);
+  padding-top: 50px;
+  position: absolute;
 }
 
 header[data-view-menu="true"] {
-  display: block;
+  color: #0e0e0e;
+  background-color: #fcfcfc;
+  border-bottom: 1px solid #e7e7e7;
+  animation-name: shutter-in-top;
+  animation-duration: 0.4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
 }
 
-.logo, .logo tr, .logo tr td {
-  height: 50px;
+header[data-view-menu="false"] table {
+  opacity: 0;
 }
 
-.margin-header{
-  margin-top: 50px;
+header[data-view-menu="true"] table {
+  opacity: 1;
+}
+
+.margin-header {
+  margin-top: 40px;
 }
 
 .logo tr td {
-  border-right: 5px solid var(--bs-dark);
+  border-right: 5px solid transparent;
 }
 
 .logo tr td img {
@@ -46,6 +58,13 @@ header[data-view-menu="true"] {
   letter-spacing: 0.02rem;
 }
 
+#subtitle-logo{
+  -webkit-transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -o-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+}
+
 .navbar-dark .logo-subtitle {
   color: #bdbdbd;
 }
@@ -54,13 +73,26 @@ header[data-view-menu="true"] {
   font-size: 2rem;
 }
 
+@keyframes shutter-in-top {
+  0%{
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100%{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
 .menu-icon {
   transform: scale(1.5);
 }
 
 :root {
-  --bar-bg: #ffffff;
+  --bar-bg: #262626;
 }
 
 .menu-icon {
@@ -77,7 +109,6 @@ header[data-view-menu="true"] {
     cursor: pointer;
     z-index: 2;
     -webkit-touch-callout: none;
-    position: absolute;
     opacity: 0;
   }
 

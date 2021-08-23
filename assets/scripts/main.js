@@ -83,6 +83,14 @@ function callbackFunc(entries, observer) {
         }
         target.setAttribute("data-is-visible", "true");
         target.setAttribute("data-is-visualized", "true");
+
+
+        document.getElementById('subtitle-logo').style.opacity = "0";
+        setTimeout(function () {
+            document.getElementById('subtitle-logo').innerHTML = entry.target.getAttribute('data-title');
+            document.getElementById('subtitle-logo').style.opacity = "1";
+        }, 200)
+
     });
 }
 
@@ -268,4 +276,27 @@ async function handleSubmit(form) {
         errorElement.innerHTML = 'Ocorreu um erro no envio do formulário, atualize a página para tentar novamente ou volte mais tarde.';
         document.getElementById("submitFormBtn").removeAttribute("disabled");
     }
+}
+
+let observerExperience = new IntersectionObserver(function (entries) {
+
+    entries.forEach(entry => {
+
+        let target = entry.target;
+        let status = entry.isIntersecting;
+        let statusv = target.getAttribute("data-is-visualized");
+
+        if (statusv === "true") {
+            return;
+        }
+
+        if (status === true) {
+            target.setAttribute("data-is-visualized", "true");
+        }
+    })
+
+}, {root: null, rootMargin: '0px', threshold: 0.5});
+const experiences = document.getElementsByClassName('timeline');
+for (let experience of experiences) {
+    observerExperience.observe(experience);
 }

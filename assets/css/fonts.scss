@@ -67,5 +67,14 @@
 }
 
 .font-Lato-Bold {
-  font-family: "Lato bold", var(--bs-font-sans-serif) !important;
+  font-family: "Lato Bold", var(--bs-font-sans-serif) !important;
+}
+
+@font-face {
+  font-family: "Lato Black";
+  src: url("../fonts/Lato/Lato-Black.ttf") format('truetype');
+}
+
+.font-Lato-Black {
+  font-family: "Lato Black", var(--bs-font-sans-serif) !important;
 }
