@@ -300,25 +300,6 @@ main.home .container {
   }
 }
 
-@keyframes slide-in-bck-bottom {
-  0% {
-    -webkit-transform: translateZ(700px) translateY(300px);
-    transform: translateZ(700px) translateY(300px);
-    opacity: 0;
-    filter: blur(50px);
-  }
-  80% {
-    opacity: 0.5;
-  }
-  100% {
-    -webkit-transform: translateZ(0) translateY(0);
-    transform: translateZ(0) translateY(0);
-    opacity: 1;
-    filter: blur(0);
-  }
-}
-
-
 .main-timeline {
   position: relative
 }
