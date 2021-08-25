@@ -19,7 +19,6 @@ function getCache(c_name) {
     return response.value;
 }
 
-
 function httpGet(theUrl, return_headers) {
     let xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", theUrl, false);
@@ -63,91 +62,8 @@ function playAnim() {
 setTimeout(function () {
     playAnim()
 }, 8000);
+
 // ./HOME ANIMATION
-
-// GET VISIBLE ELEMENT
-function callbackFunc(entries, observer) {
-    entries.forEach(entry => {
-        let target = entry.target;
-        let status = entry.isIntersecting;
-
-        if (target.id === 'main-home' && status === false) {
-            document.getElementById('header').setAttribute('data-view-menu', "true");
-        } else if (target.id === 'main-home' && status === true) {
-            document.getElementById('header').setAttribute('data-view-menu', "false");
-        }
-
-        if (status === false) {
-            target.setAttribute("data-is-visible", "false");
-            return;
-        }
-        target.setAttribute("data-is-visible", "true");
-        target.setAttribute("data-is-visualized", "true");
-
-
-        document.getElementById('subtitle-logo').style.opacity = "0";
-        setTimeout(function () {
-            document.getElementById('subtitle-logo').innerHTML = entry.target.getAttribute('data-title');
-            document.getElementById('subtitle-logo').style.opacity = "1";
-        }, 200)
-
-    });
-}
-
-let observer = new IntersectionObserver(callbackFunc, {root: null, rootMargin: '0px', threshold: 0.3});
-const sections = document.getElementsByTagName('section');
-observer.observe(document.getElementById('main-home'));
-for (let section of sections) {
-    observer.observe(section);
-}
-
-// NUMBER COUNT
-let countNumbers = new IntersectionObserver(function (entries) {
-
-    function animateValue(target, start, end, duration) {
-        if (start === end) return;
-        let range = end - start;
-        let current = start;
-        let increment = end > start ? 1 : -1;
-        let stepTime = Math.abs(Math.floor(duration / range));
-        let obj = target;
-        let timer = setInterval(function () {
-            current += increment;
-            obj.innerHTML = current;
-            if (current == end) {
-                clearInterval(timer);
-            }
-        }, stepTime);
-    }
-
-    entries.forEach(entry => {
-        let target = entry.target;
-        let status = entry.isIntersecting;
-        let statusv = target.getAttribute("data-is-visualized");
-        let datacount = parseInt(target.getAttribute("data-number"));
-        let startcount = 0;
-
-        if (statusv === "true") {
-            return;
-        }
-
-        if (datacount >= 2000) {
-            startcount = parseInt((datacount / 3 * 1.5).toString().split(".")[0]);
-        }
-
-        if (status === true) {
-            animateValue(target, startcount, datacount, 2000);
-            target.setAttribute("data-is-visualized", "true");
-        }
-
-    });
-}, {root: null, rootMargin: '0px', threshold: 0.3});
-const numbersToCount = document.getElementsByClassName('numscroller');
-for (let numberToCount of numbersToCount) {
-    countNumbers.observe(numberToCount);
-}
-
-///.NUMBER COUNT
 
 
 function portifolio() {
@@ -278,25 +194,95 @@ async function handleSubmit(form) {
     }
 }
 
-let observerExperience = new IntersectionObserver(function (entries) {
 
+////////////////////////////////////////////
+
+function observerElements(entries) {
     entries.forEach(entry => {
 
         let target = entry.target;
         let status = entry.isIntersecting;
         let statusv = target.getAttribute("data-is-visualized");
 
-        if (statusv === "true") {
+        if (statusv === 'false' && entry.target.classList[0] === 'numscroller') {
+            numbersAnimation(entry);
+        }
+
+        if (target.localName === 'main' && status === false) {
+            document.getElementById('header').setAttribute('data-view-menu', "true");
+        } else if (target.id === 'main-home' && status === true) {
+            document.getElementById('header').setAttribute('data-view-menu', "false");
+        }
+
+        if (status === false) {
+            target.setAttribute("data-is-visible", "false");
+            return;
+        }
+        target.setAttribute("data-is-visible", "true");
+        target.setAttribute("data-is-visualized", "true");
+
+
+    });
+}
+
+let observer = new IntersectionObserver(observerElements, {root: null, rootMargin: '0px', threshold: 0.3});
+let elementList = document.querySelectorAll(['main', 'section', '.numscroller', '.timeline']);
+console.log(elementList);
+elementList.forEach(section => {
+    observer.observe(section);
+});
+
+function numbersAnimation(entry) {
+
+    function animateValue(target, start, end, duration) {
+        if (start === end) return;
+        let range = end - start;
+        let current = start;
+        let increment = end > start ? 1 : -1;
+        let stepTime = Math.abs(Math.floor(duration / range));
+        let obj = target;
+        let timer = setInterval(function () {
+            current += increment;
+            obj.innerHTML = current;
+            if (current == end) {
+                clearInterval(timer);
+            }
+        }, stepTime);
+    }
+
+    let target = entry.target;
+    let status = entry.isIntersecting;
+    let datacount = parseInt(target.getAttribute("data-number"));
+    let startcount = 0;
+
+    if (datacount >= 2000) {
+        startcount = parseInt((datacount / 3 * 1.5).toString().split(".")[0]);
+    }
+
+    if (status === true) {
+        animateValue(target, startcount, datacount, 2000);
+    }
+}
+
+function subtitleLogoAnimation() {
+    setInterval(function () {
+        let elementVisible = document.querySelectorAll(['section[data-is-visible="true"]', 'main[data-is-visible="true"]', 'footer[data-is-visible="true"]']);
+        let text = 'Desenvolvedor';
+
+        if (elementVisible[0]) {
+            text = elementVisible[0].getAttribute('data-title');
+        }
+
+        if (document.getElementById('subtitle-logo').textContent === text) {
             return;
         }
 
-        if (status === true) {
-            target.setAttribute("data-is-visualized", "true");
-        }
-    })
-
-}, {root: null, rootMargin: '0px', threshold: 0.5});
-const experiences = document.getElementsByClassName('timeline');
-for (let experience of experiences) {
-    observerExperience.observe(experience);
+        document.getElementById('subtitle-logo').style.opacity = "0";
+        setTimeout(function () {
+            document.getElementById('subtitle-logo').innerHTML = text;
+            document.getElementById('subtitle-logo').style.opacity = "1";
+        }, 200)
+    }, 500);
 }
+
+subtitleLogoAnimation()

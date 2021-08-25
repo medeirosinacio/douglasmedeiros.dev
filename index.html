@@ -80,14 +80,14 @@ layout: default
 
                     <div class="col-6 col-lg-3 col-xl-6 px-0 px-lg-3">
                         <div class="count-item py-4 text-start font-Hind-SemiBold fs-2">
-                            <div class="numscroller" data-number="31">0</div>
+                            <div class="numscroller" data-number="31" data-is-visualized="false">0</div>
                             <div class="count-name-intro">Projetos</div>
                         </div>
                     </div>
 
                     <div class="col-6 col-lg-3 col-xl-6 ">
                         <div class="count-item py-4 text-start font-Hind-SemiBold fs-2">
-                            <div class="numscroller" data-number="1474">0</div>
+                            <div class="numscroller" data-number="1474" data-is-visualized="false">0</div>
                             <div class="count-name-intro">Commits</div>
                         </div>
                     </div>
@@ -100,14 +100,16 @@ layout: default
 
                     <div class="col-6 col-lg-3 col-xl-6 px-0 px-lg-3">
                         <div class="count-item py-4 text-start font-Hind-SemiBold fs-2">
-                            <div class="numscroller" data-number="{{ daysSince | times: 1.8 }}">0</div>
+                            <div class="numscroller" data-number="{{ daysSince | times: 1.8 }}"
+                                 data-is-visualized="false">0
+                            </div>
                             <div class="count-name-intro">Copos de café</div>
                         </div>
                     </div>
 
                     <div class="col-6 col-lg-3 col-xl-6 ps-3 ps-lg-5 ps-xl-3">
                         <div class="count-item py-4 text-start font-Hind-SemiBold fs-2">
-                            <div class="numscroller" data-number="1">0</div>
+                            <div class="numscroller" data-number="1" data-is-visualized="false">0</div>
                             <div class="count-name-intro">Pet</div>
                         </div>
                     </div>
@@ -192,7 +194,8 @@ layout: default
     </div>
 </section>
 
-<section id="servicos" data-title="Serviço" class="home-servicos w-100 h-100vh align-items-center text-center py-4 bg-semilight text-dark"
+<section id="servicos" data-title="Serviço"
+         class="home-servicos w-100 h-100vh align-items-center text-center py-4 bg-semilight text-dark"
          data-is-visualized="false">
     <div class="container margin-header px-4 px-lg-5">
         <div class="row py-lg-5">
@@ -253,7 +256,8 @@ layout: default
     </div>
 </section>
 
-<section id="experiencia" data-title="Experiência"  class="home-experiencia w-100 h-100vh align-items-center text-center py-4 bg-light text-dark"
+<section id="experiencia" data-title="Experiência"
+         class="home-experiencia w-100 h-100vh align-items-center text-center py-4 bg-light text-dark"
          data-is-visualized="false">
     <div class="container margin-header px-0 px-sm-4 px-lg-5">
         <div class="row py-lg-5">
@@ -265,7 +269,7 @@ layout: default
                     <div class="main-timeline">
 
                         <!-- start experience section-->
-                        <div class="timeline" >
+                        <div class="timeline">
                             <div class="icon"></div>
                             <div class="date-content">
                                 <div class="date-outer">
@@ -457,7 +461,8 @@ layout: default
     </div>
 </section>
 
-<section id="contato" data-title="Contato"  class="d-none home-contato w-100 h-100vh align-items-center text-center py-4 text-dark"
+<section id="contato" data-title="Contato"
+         class="d-none home-contato w-100 h-100vh align-items-center text-center py-4 text-dark"
          data-is-visualized="false">
     <div class="container margin-header pb-4 px-md-5 w-md-75">
         <div class="row py-lg-5 px-md-5">
