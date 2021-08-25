@@ -1,3 +1,6 @@
+---
+layout: html_minifier
+---
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
 {% include head.html %}
@@ -7,7 +10,6 @@
     {% include header.html %}
     {{ content }}
 </div>
-<script src="{{ site.srcurl }}{{ site.js_path }}aos/aos.js"></script>
-<script src="{{ site.srcurl }}{{ site.js_path }}main.js"></script>
+<script src="{{ site.srcurl }}{{ site.js_path }}bundle.js"></script>
 </body>
 </html>

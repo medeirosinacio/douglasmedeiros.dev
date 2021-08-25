@@ -1,6 +1,6 @@
 function setCache(c_name, value, exdays = 0) {
     let xmlHttp = new XMLHttpRequest();
-    let cookie = getCache(c_name)
+    let cookie = getCache(c_name);
     if (cookie === null) {
         xmlHttp.open('GET',
             "https://api.countapi.xyz/create?update_upperbound=10000&key=" + c_name + "&namespace=medeirosinacio&value=" + value);
@@ -24,44 +24,46 @@ function httpGet(theUrl, return_headers) {
     xmlHttp.open("GET", theUrl, false);
     xmlHttp.send(null);
     if (return_headers) {
-        return xmlHttp
+        return xmlHttp;
     }
     return xmlHttp.responseText;
 }
 
 // HOME ANIMATION
-let typeText = document.querySelector(".typeText")
+let typeText = document.querySelector(".typeText");
 if (typeText) {
-    let textToBeTypedArr = ["e Analista", "e Devops", "e Curioso", "", "", "", "", "", "", ""]
-    let index = 0, isAdding = true, textToBeTypedIndex = 0
+    let textToBeTypedArr = ["e Analista", "e Devops", "e Curioso", "", "", "", "", "", "", ""];
+    let index = 0;
+    let isAdding = true;
+    let textToBeTypedIndex = 0;
 
     function playAnim() {
         setTimeout(function () {
-            typeText.innerText = textToBeTypedArr[textToBeTypedIndex].slice(0, index)
+            typeText.innerText = textToBeTypedArr[textToBeTypedIndex].slice(0, index);
             if (isAdding) {
                 if (index > textToBeTypedArr[textToBeTypedIndex].length) {
-                    isAdding = false
+                    isAdding = false;
                     setTimeout(function () {
-                        playAnim()
-                    }, 2000)
-                    return
+                        playAnim();
+                    }, 2000);
+                    return;
                 } else {
-                    index++
+                    index++;
                 }
             } else {
                 if (index === 0) {
-                    isAdding = true
-                    textToBeTypedIndex = (textToBeTypedIndex + 1) % textToBeTypedArr.length
+                    isAdding = true;
+                    textToBeTypedIndex = (textToBeTypedIndex + 1) % textToBeTypedArr.length;
                 } else {
-                    index--
+                    index--;
                 }
             }
-            playAnim()
-        }, isAdding ? 110 : 60)
+            playAnim();
+        }, isAdding ? 110 : 60);
     }
 
     setTimeout(function () {
-        playAnim()
+        playAnim();
     }, 8000);
 }
 
@@ -73,8 +75,6 @@ function portifolio() {
     for (let i = 0; i < radios.length; i++) {
         if (radios[i].checked) {
             let view = radios[i].getAttribute("id").replace('port-', '');
-
-
             break;
         }
     }
@@ -83,9 +83,9 @@ function portifolio() {
 function maskTel(input) {
     let value = input.value;
     value = value.substring(0, 15);
-    value = value.replace(/\D/g, "")
-    value = value.replace(/^(\d\d)(\d)/g, "($1) $2")
-    value = value.replace(/(\d{4})(\d)/, "$1-$2")
+    value = value.replace(/\D/g, "");
+    value = value.replace(/^(\d\d)(\d)/g, "($1) $2");
+    value = value.replace(/(\d{4})(\d)/, "$1-$2");
     document.getElementById(input.id).value = value;
 }
 
@@ -119,27 +119,27 @@ function validateAccessKey(key) {
 function validValues() {
 
     if (!validateAccessKey(document.getElementById('accessKey').value)) {
-        console.log('Chave inválida.')
+        console.log('Chave inválida.');
         return false;
     }
 
     if (!validateSubject(document.getElementById('subject').value)) {
-        console.log('Assunto inválido.')
+        console.log('Assunto inválido.');
         return false;
     }
 
     if (!validateName(document.getElementById('name').value)) {
-        console.log('O nome deve ter entre 5 e 50 caracteres.')
+        console.log('O nome deve ter entre 5 e 50 caracteres.');
         return false;
     }
 
     if (!validateEmail(document.getElementById('email').value)) {
-        console.log('Email inválido.')
+        console.log('Email inválido.');
         return false;
     }
 
     if (!validatePhone(document.getElementById('phone').value)) {
-        console.log('Telefone inválido.')
+        console.log('Telefone inválido.');
         return false;
     }
 
@@ -197,9 +197,6 @@ async function handleSubmit(form) {
 }
 
 
-////////////////////////////////////////////
-
-
 function numbersAnimation(entry) {
 
     function animateValue(target, start, end, duration) {
@@ -212,7 +209,7 @@ function numbersAnimation(entry) {
         let timer = setInterval(function () {
             current += increment;
             obj.innerHTML = current;
-            if (current == end) {
+            if (current === end) {
                 clearInterval(timer);
             }
         }, stepTime);
@@ -253,10 +250,8 @@ function subtitleLogoAnimation() {
     }, 500);
 }
 
-//subtitleLogoAnimation()
-
 document.addEventListener("DOMContentLoaded", function () {
     AOS.init({
         duration: 1200,
-    })
+    });
 });
