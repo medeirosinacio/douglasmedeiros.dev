@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
 {% include head.html %}
-<body id="body" class="d-flex flex-column h-100 bg-dark" cz-shortcut-listen="true">
+<body id="body" class="d-flex flex-column h-100 h-100vh bg-dark" cz-shortcut-listen="true">
 <h1 class="d-none">{{ site.title }}</h1>
 <div class="flex-shrink-0">
     {% include header.html %}
     {{ content }}
 </div>
-<script src="{{ site.srcurl }}{{ site.js_path }}bootstrap/bootstrap.min.js"></script>
+<script src="{{ site.srcurl }}{{ site.js_path }}aos/aos.js"></script>
 <script src="{{ site.srcurl }}{{ site.js_path }}main.js"></script>
 </body>
 </html>

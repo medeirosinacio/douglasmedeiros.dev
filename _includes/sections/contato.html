@@ -1,0 +1,93 @@
+<section id="contato" data-title="Contato"
+         class="d-none home-contato w-100 h-100vh align-items-center text-center py-4 text-dark">
+    <div class="container margin-header pb-4 px-md-5 w-md-75">
+        <div class="row py-lg-5 px-md-5">
+            <div class="col-md-12 py-5 text-start">
+                <h2 class="font-Hind-SemiBold">Contato</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 text-start pe-5">
+                    <p class="pe-5">
+                        Orçamentos ou propostas
+                        podem ser enviados pelos contatos listados ou formulário, vamos trocar uma ideia e tirar esse
+                        projeto do papel.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <form id="staticform" class="staticform bg-dark text-light rounded-1 p-5"
+                          onsubmit="handleSubmit(this); return false;">
+
+                        <input type="hidden" id="accessKey" name="accessKey" value="{{ site.staticforms_api_key }}">
+                        <input type="text" name="honeypot" style="display: none;" value="only test">
+                        <input type="hidden" id="subject" name="subject" value="Test jekyll-bootstrap">
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control"
+                                   id="name"
+                                   name="name"
+                                   type="text"
+                                   placeholder="Seu nome..."
+                                   minlength="5"
+                                   maxlength="50" required>
+                            <label for="name">Nome</label>
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" name="email" type="email" required
+                                   placeholder="name@example.com">
+                            <label for="email">E-mail</label>
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <!-- Phone number input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control"
+                                   id="phone"
+                                   name="phone"
+                                   type="tel"
+                                   placeholder="(51) 3456-7890"
+                                   maxlength="15"
+                                   minlength="14"
+                                   onchange="maskTel(this)"
+                                   onkeyup="maskTel(this)"
+                                   onkeypress="maskTel(this)"
+                                   onautocomplete="maskTel(this)"
+                                   required>
+                            <label for="phone">Telefone</label>
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control"
+                                      id="message"
+                                      name="message"
+                                      type="text"
+                                      minlength="10"
+                                      maxlength="250"
+                                      required
+                                      placeholder="Entre com sua mensagem aqui..." style="height: 10rem"></textarea>
+                            <label for="message">Mensagem</label>
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <div class="alert alert-danger d-none" id="submitErrorBox" role="alert">
+                            <div class="text-center text-danger" id="submitErrorMessage"></div>
+                        </div>
+
+                        <!-- Submit Button-->
+                        <div class="d-grid">
+                            <button class="btn btn-secondary btn-lg btn-load-img" type="submit" id="submitFormBtn">
+                                <img src="{{site.srcurl}}/assets/gifs/load_white.gif" class="d-none" height="28">
+                                Enviar Mensagem
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

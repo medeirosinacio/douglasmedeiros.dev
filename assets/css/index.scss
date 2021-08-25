@@ -10,7 +10,7 @@
   background-position: center;
   background-size: cover;
   background-color: #000;
-  opacity: 0.5;
+  opacity: 0.5 !important;
 }
 
 main.home {
@@ -195,20 +195,6 @@ main.home .container {
 
 .home-contato form input {
   color: black;
-}
-
-section[data-is-visualized="true"] .container {
-  animation-name: slide-in-bck-bottom;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-}
-
-section[data-is-visualized="false"] .container {
-  opacity: 0;
 }
 
 @include media-breakpoint-down(xxl) {
@@ -523,21 +509,6 @@ section[data-is-visualized="false"] .container {
   text-align: right
 }
 
-.timeline{
-  transform: scale(0.2);
-}
-
-.timeline[data-is-visualized="true"]{
-  animation-name: scale-up-center;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  transform: scale(1);
-}
-
 @media only screen and (max-width: 991px) {
   .main-timeline .date-content {
     margin-top: 35px
@@ -602,16 +573,5 @@ section[data-is-visualized="false"] .container {
   .main-timeline .title {
     margin-bottom: 10px;
     padding-top: 15px;
-  }
-}
-
-@keyframes scale-up-center {
-  0%{
-    -webkit-transform: scale(.2);
-    transform: scale(.2);
-  }
-  100%{
-    -webkit-transform: scale(1);
-    transform: scale(1);
   }
 }
