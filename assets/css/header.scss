@@ -4,7 +4,6 @@ header {
   display: block;
   opacity: 0.97;
   color: #0e0e0e;
-  background-color: #fcfcfc;
   border-bottom: 1px solid #e7e7e7;
 }
 
@@ -31,11 +30,7 @@ header[data-view-menu="true"] {
   animation-fill-mode: forwards;
 }
 
-header[data-view-menu="false"] table {
-  opacity: 0;
-}
-
-header[data-view-menu="true"] table {
+header table {
   opacity: 1;
 }
 
