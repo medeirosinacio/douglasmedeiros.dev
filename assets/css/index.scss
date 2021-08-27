@@ -189,6 +189,12 @@ main.home .container {
 
 }
 
+.home-contato form {
+  -webkit-box-shadow: 6px 9px 5px 0px rgba(0,0,0,0.68);
+  -moz-box-shadow: 6px 9px 5px 0px rgba(0,0,0,0.68);
+  box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.68);
+}
+
 .home-contato form div {
   color: black;
 }
@@ -555,4 +561,32 @@ main.home .container {
     margin-bottom: 10px;
     padding-top: 15px;
   }
+}
+
+#github{
+  background-image: url("/assets/icons/github.png");
+  background-repeat: no-repeat;
+  background-size: 25rem;
+  background-position-y: center;
+  background-position-x: right;
+}
+
+
+#github .btn{
+  background: linear-gradient(to right, #d0d0d0 50%, #ffffff 50%);
+  background-size: 200% 100%;
+  background-position:right bottom;
+  margin-left:10px;
+  transition: all 0.05s ease-in;
+  -webkit-box-shadow: 6px 9px 5px 0px rgba(0,0,0,0.68);
+  -moz-box-shadow: 6px 9px 5px 0px rgba(0,0,0,0.68);
+  box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.68);
+}
+
+#github .btn:hover, #github .btn:active{
+  background-position:left bottom;
+  margin-top: 5px;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
 }
