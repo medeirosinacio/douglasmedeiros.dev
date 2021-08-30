@@ -44,6 +44,15 @@
 }
 
 @font-face {
+  font-family: "Lato-Regular";
+  src: url("../fonts/Lato/Lato-Regular.ttf") format('truetype');
+}
+
+.font-Lato-Regular {
+  font-family: "Lato-Regular", var(--bs-font-sans-serif) !important;
+}
+
+@font-face {
   font-family: "Lato";
   src: url("../fonts/Lato/Lato-Medium.ttf") format('truetype');
 }

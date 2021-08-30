@@ -1,5 +1,16 @@
 function maskTel(input) {
     let value = input.value;
+    let valueOnlyNumber = value.replace(/\D/g, "");
+
+    if (valueOnlyNumber.length > 11) {
+        if (valueOnlyNumber.substring(0, 3) === '550') {
+            value = value.substring(3);
+        }
+        if (valueOnlyNumber.substring(0, 2) === '55') {
+            value = value.substring(2);
+        }
+    }
+
     value = value.substring(0, 15);
     value = value.replace(/\D/g, "");
     value = value.replace(/^(\d\d)(\d)/g, "($1) $2");
@@ -21,7 +32,7 @@ function validateEmail(email) {
 }
 
 function validatePhone(phone) {
-    const re = /^\(\d{2}\) \d{4}-\d{4,5}$/gi;
+    const re = /^\(\d{2}\)\s\d{4}-\d{4,5}$/gi;
     return re.test(String(phone).toLowerCase());
 }
 
@@ -37,32 +48,33 @@ function validateAccessKey(key) {
 function validValues() {
 
     if (!validateAccessKey(document.getElementById('accessKey').value)) {
-        console.log('Chave inválida.');
         return false;
     }
 
     if (!validateSubject(document.getElementById('subject').value)) {
-        console.log('Assunto inválido.');
         return false;
     }
 
     if (!validateName(document.getElementById('name').value)) {
-        console.log('O nome deve ter entre 5 e 50 caracteres.');
-        return false;
-    }
-
-    if (!validateEmail(document.getElementById('email').value)) {
-        console.log('Email inválido.');
+        const errorElement = document.getElementById('submitErrorBox');
+        errorElement.innerHTML = 'O nome deve ter entre 5 e 50 caracteres.';
         return false;
     }
 
     if (!validatePhone(document.getElementById('phone').value)) {
-        console.log('Telefone inválido.');
+        const errorElement = document.getElementById('submitErrorBox');
+        errorElement.innerHTML = 'Telefone inválido.';
+        return false;
+    }
+
+    if (!validateEmail(document.getElementById('email').value)) {
+        const errorElement = document.getElementById('submitErrorBox');
+        errorElement.innerHTML = 'Email inválido.';
         return false;
     }
 
     if (!validateMessage(document.getElementById('message').value)) {
-        const errorElement = document.getElementById('submitErrorMessage');
+        const errorElement = document.getElementById('submitErrorBox');
         errorElement.innerHTML = 'A mensagem deve ter entre 10 e 250 caracteres.';
         return false;
     }
@@ -101,14 +113,14 @@ async function handleSubmit(form) {
             }, 3000);
 
         } else {
-            console.log(json);
             const errorElement = document.getElementById('submitErrorMessage');
+            errorElement.classList.remove("d-none");
             errorElement.innerHTML = 'Ocorreu um erro no envio do formulário, atualize a página para tentar novamente ou volte mais tarde.';
             document.getElementById("submitFormBtn").removeAttribute("disabled");
         }
     } catch (e) {
-        console.log('An error occurred', e);
         const errorElement = document.getElementById('submitErrorMessage');
+        errorElement.classList.remove("d-none");
         errorElement.innerHTML = 'Ocorreu um erro no envio do formulário, atualize a página para tentar novamente ou volte mais tarde.';
         document.getElementById("submitFormBtn").removeAttribute("disabled");
     }

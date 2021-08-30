@@ -176,31 +176,98 @@ main.home .container {
   padding: 0.7rem 0 0.1rem 0;
 }
 
-.home-contato {
-  background-image: url(/assets/images/fundo-contato.jpg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position-x: right;
-  background-position-y: top;
-  background-attachment: fixed;
+.home-contato .staticform .form-group {
+  padding: 1rem 0;
 }
 
-.staticform {
-
+.home-contato .staticform .form-group .control-label {
+  color: #6d6d6d;
+  font-size: 0.75rem;
+  float: left;
+  margin-bottom: -5px;
 }
 
-.home-contato form {
-  -webkit-box-shadow: 6px 9px 5px 0px rgba(0,0,0,0.68);
-  -moz-box-shadow: 6px 9px 5px 0px rgba(0,0,0,0.68);
-  box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.68);
+.home-contato .staticform .form-group .form-control {
+  background-color: transparent !important;
+  color: #f1f1f1 !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid #d7d7d7 !important;
+  margin-bottom: 0.25rem !important;
+  font-size: 1.3rem;
+  padding-bottom: 1px;
+  @extend .font-Lato-Regular;
 }
 
-.home-contato form div {
-  color: black;
+.home-contato .staticform .form-submit button {
+  background: linear-gradient(to right, #d0d0d0 50%, #ffffff 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.12s ease;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.68);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.68);
 }
 
-.home-contato form input {
-  color: black;
+.home-contato .staticform .form-submit button:hover,
+.home-contato .staticform .form-submit button:active {
+  background-position: left bottom;
+}
+
+
+.home-contato .staticform .form-group .form-control:active,
+.home-contato .staticform .form-group .form-control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.home-contato .staticform .form-group .form-control:-webkit-autofill,
+.home-contato .staticform .form-group .form-control:-webkit-autofill:hover,
+.home-contato .staticform .form-group .form-control:-webkit-autofill:focus,
+.home-contato .staticform .form-group .form-control:-webkit-autofill:active {
+  -webkit-text-fill-color: #d2d2d2 !important;
+  -webkit-box-shadow: 0 0 0 1000px var(--bs-dark) inset !important;
+}
+
+.home-contato .find-widget {
+  padding-bottom: 10px;
+  font-size: 1rem;
+  color: #c7c7c7 !important;
+  @extend .font-Lato-Regular;
+}
+
+.home-contato .find-widget a {
+  @extend .text-reset;
+  text-decoration: none;
+}
+
+.home-contato .find-widget a i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.home-contato .find-widget a:hover i:before {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  animation-duration: 0.1s;
+  animation-name: flip;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.home-contato .find-widget a:hover {
+  color: white !important;
+}
+
+.home-contato .find-widget a.btn {
+  animation-duration: 0s;
+}
+
+.home-contato .find-widget a.btn:hover {
+  color: #0e0e0e !important;
+  background-color: white;
+  animation-duration: 0s;
 }
 
 @include media-breakpoint-down(xxl) {
@@ -477,7 +544,7 @@ main.home .container {
   font-size: 0.9rem;
 }
 
-.main-timeline .description i:last-of-type{
+.main-timeline .description i:last-of-type {
   word-spacing: 0.5rem;
   font-size: 0.8rem;
   color: #464646;
@@ -563,7 +630,7 @@ main.home .container {
   }
 }
 
-#github{
+#github {
   background-image: url("/assets/icons/github.png");
   background-repeat: no-repeat;
   background-size: 25rem;
@@ -572,21 +639,21 @@ main.home .container {
 }
 
 
-#github .btn{
+#github .btn {
   background: linear-gradient(to right, #d0d0d0 50%, #ffffff 50%);
   background-size: 200% 100%;
-  background-position:right bottom;
-  margin-left:10px;
+  background-position: right bottom;
+  margin-left: 10px;
   transition: all 0.05s ease-in;
-  -webkit-box-shadow: 6px 9px 5px 0px rgba(0,0,0,0.68);
-  -moz-box-shadow: 6px 9px 5px 0px rgba(0,0,0,0.68);
-  box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.68);
+  -webkit-box-shadow: 6px 9px 5px 0px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 6px 9px 5px 0px rgba(0, 0, 0, 0.68);
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.68);
 }
 
-#github .btn:hover, #github .btn:active{
-  background-position:left bottom;
+#github .btn:hover, #github .btn:active {
+  background-position: left bottom;
   margin-top: 5px;
-  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
