@@ -207,6 +207,7 @@ main.home .container {
   -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.68);
   -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.68);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.68);
+  width: 160px;
 }
 
 .home-contato .staticform .form-submit button:hover,
@@ -227,6 +228,10 @@ main.home .container {
 .home-contato .staticform .form-group .form-control:-webkit-autofill:active {
   -webkit-text-fill-color: #d2d2d2 !important;
   -webkit-box-shadow: 0 0 0 1000px var(--bs-dark) inset !important;
+}
+
+.home-contato .staticform #submitErrorBox{
+  color: #dd3939;
 }
 
 .home-contato .find-widget {
@@ -262,12 +267,125 @@ main.home .container {
 
 .home-contato .find-widget a.btn {
   animation-duration: 0s;
+  width: 160px;
 }
 
 .home-contato .find-widget a.btn:hover {
   color: #0e0e0e !important;
   background-color: white;
   animation-duration: 0s;
+}
+
+.home-contato{
+  $circle-length: 51px;
+  $check-length: 36px;
+  overflow-x: hidden;
+
+  .success-message .card .card-footer,
+  .success-message .card .card-header,
+  .success-message .card{
+    background-color: transparent;
+    border: 0;
+  }
+
+  .success-message .card .card-header{
+    font-size: 2rem;
+    color: #454545;
+    cursor: pointer;
+  }
+
+  .success-message .card .card-footer{
+    margin-top: -28px;
+    padding: 0;
+  }
+
+  .success-message .card .card-header:hover{
+    color: #6d6d6d;
+  }
+
+  .success-message .card .card-body svg{
+    height: 250px;
+  }
+
+  @keyframes scaleAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(1.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes drawCircle {
+    0% {
+      stroke-dashoffset: $circle-length;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes drawCheck {
+    0% {
+      stroke-dashoffset: $check-length;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  #successAnimationCircle {
+    stroke-dasharray: $circle-length $circle-length;
+    stroke: #FFF;
+  }
+
+  #successAnimationCheck {
+    stroke-dasharray: $check-length $check-length;
+    stroke: #FFF;
+  }
+
+  #successAnimationResult {
+    fill: #FFF;
+    opacity: 0;
+  }
+
+  #successAnimation.animated {
+    animation: 1s ease-out 0s 1 both scaleAnimation;
+
+    #successAnimationCircle {
+      animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle,
+      0.3s linear 0.9s 1 both fadeOut;
+    }
+
+    #successAnimationCheck {
+      animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck,
+      0.3s linear 0.9s 1 both fadeOut;
+    }
+
+    #successAnimationResult {
+      animation: 0.3s linear 0.9s both fadeIn;
+    }
+  }
 }
 
 @include media-breakpoint-down(xxl) {
