@@ -47,15 +47,19 @@ function subtitleLogoAnimation(element, type) {
         document.getElementById('header').classList.remove('mini');
         document.getElementById('header').classList.remove('mini-animation');
         document.getElementById('header').classList.add('animation');
-    } else {
-        document.getElementById('header').classList.add('mini');
-        document.getElementById('header').classList.add('mini-animation');
-        document.getElementById('header').classList.remove('animation');
     }
 
     write(title);
 
 }
+
+setInterval(function () {
+    if (window.scrollY <= 350) {
+        document.getElementById('header').classList.add('mini');
+        document.getElementById('header').classList.add('mini-animation');
+        document.getElementById('header').classList.remove('animation');
+    }
+}, 1000);
 
 function numbersAnimation() {
     function animateValue(target, start, end, duration) {
