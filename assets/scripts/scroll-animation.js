@@ -39,13 +39,21 @@ function subtitleLogoAnimation(element, type) {
         return;
     }
 
-    if (type === 'in') {
-        write(title);
+    if (type === 'out') {
+        title = titles[titles.indexOf(title) - 1];
     }
 
-    if (type === 'out') {
-        write(titles[titles.indexOf(title) - 1]);
+    if (title !== 'Desenvolvedor') {
+        document.getElementById('header').classList.remove('mini');
+        document.getElementById('header').classList.remove('mini-animation');
+        document.getElementById('header').classList.add('animation');
+    } else {
+        document.getElementById('header').classList.add('mini');
+        document.getElementById('header').classList.add('mini-animation');
+        document.getElementById('header').classList.remove('animation');
     }
+
+    write(title);
 
 }
 
