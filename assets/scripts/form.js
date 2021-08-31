@@ -134,15 +134,15 @@ async function handleSubmit(form) {
             }, 3000);
 
         } else {
-            const errorElement = document.getElementById('submitErrorBoxMessage');
+            const errorElementMessage = document.getElementById('submitErrorBoxMessage');
             errorElement.classList.remove("d-none");
-            errorElement.innerHTML = 'Ocorreu um erro no envio do formulário, atualize a página para tentar novamente ou volte mais tarde.';
+            errorElementMessage.innerHTML = 'Ocorreu um erro no envio do formulário, atualize a página para tentar novamente ou volte mais tarde.';
             document.getElementById("submitFormBtn").removeAttribute("disabled");
         }
     } catch (e) {
-        const errorElement = document.getElementById('submitErrorBoxMessage');
+        const errorElementMessage = document.getElementById('submitErrorBoxMessage');
         errorElement.classList.remove("d-none");
-        errorElement.innerHTML = 'Ocorreu um erro no envio do formulário, atualize a página para tentar novamente ou volte mais tarde.';
+        errorElementMessage.innerHTML = 'Ocorreu um erro no envio do formulário, atualize a página para tentar novamente ou volte mais tarde.';
         document.getElementById("submitFormBtn").removeAttribute("disabled");
     }
 }
