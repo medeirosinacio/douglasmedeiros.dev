@@ -24,7 +24,7 @@ paginate_path: "/blog/pagina/:num"
 disqus_api_url: douglasmedeiros-dev.disqus.com
 
 logo: /assets/images/logo/logo.png
-description: Ola, sou o Douglas Medeiros, Desenvolvedor de Software e apaixonado por tecnologia, bem-vindo ao meu site e portfólio pessoal.
+description: Olá, sou o Douglas Medeiros, desenvolvedor de software e apaixonado por tecnologia, bem-vindo ao meu site e portfólio pessoal.
 # Social Media
 social:
   name: Douglas Medeiros
