@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener('aos:in', ({detail}) => {
-    console.log(detail);
     subtitleLogoAnimation(detail, 'in');
 });
 
