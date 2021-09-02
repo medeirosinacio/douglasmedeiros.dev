@@ -7,52 +7,15 @@
             </div>
             <div class="col-md-12">
                 <div class="row">
+                    {% for servico in site.data.dados.servicos %}
                     <div class="col-md-6 col-lg-4" data-aos="fade-up">
                         <div class="servico-item">
-                            <i class="bi bi-hdd-stack-fill"></i>
-                            <h4>Desenvolvimento</h4>
-                            <p>Sistemas de gestão ERP, CRM, RPA, integrados ou API's complexas
-                                com implementação de metodologias ágeis.</p>
+                            {{ servico.icon }}
+                            <h4>{{ servico.title }}</h4>
+                            <p>{{ servico.text }}</p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                        <div class="servico-item">
-                            <i class="bi bi-caret-right-fill"></i>
-                            <i class="bi bi-caret-right-fill"></i>
-                            <h4>Automação</h4>
-                            <p>Desenvolvimento de sistemas integrados para automação de rotinas e processos.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                        <div class="servico-item">
-                            <i class="bi bi-file-bar-graph-fill"></i>
-                            <h4>Analista</h4>
-                            <p>Mapeamento e análise de fluxo de processos para otimização e melhoria de sistemas.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                        <div class="servico-item">
-                            <i class="bi bi-signpost-2-fill"></i>
-                            <h4>Website</h4>
-                            <p>Desde blogs com baixo custo até comerciais landpages com domínio e email exclusivo.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                        <div class="servico-item">
-                            <i class="bi bi-phone-fill"></i>
-                            <h4>Aplicativo</h4>
-                            <p>Aplicações mobile para integrar sistemas novos ou já existentes, disponível em
-                                multiplataformas.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                        <div class="servico-item">
-                            <i class="bi bi-asterisk"></i>
-                            <h4>Especificidade</h4>
-                            <p>Tem um projeto muito especifico? alguma automação ou extensão de navegador? tenho certeza
-                                que posso ajudar.</p>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

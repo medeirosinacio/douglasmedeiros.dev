@@ -1,5 +1,5 @@
 <section id="experiencia" data-title="Experiência"
-         class="home-experiencia w-100 h-100vh align-items-center text-center py-4 bg-light text-dark">
+         class="home-experiencia w-100 h-100vh align-items-center py-4 bg-light text-dark">
     <div class="container margin-header px-0 px-sm-4 px-lg-5" data-aos="fade-up">
         <div class="row w-100 py-lg-5">
             <div class="col-md-12 text-center">
@@ -8,193 +8,31 @@
             <div class="col-md-12">
                 <div class="container">
                     <div class="main-timeline">
-
-                        <!-- start experience section-->
+                        {% for experiencia in site.data.dados.experiencias %}
                         <div class="timeline" data-aos="zoom-in">
                             <div class="icon"></div>
                             <div class="date-content">
                                 <div class="date-outer">
                                     <span class="date">
-                                            <span class="month">Nov</span>
-                                    <span class="year">2012</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="timeline-content text-start" data-aos="zoom-in">
-                                <h5 class="title">Desenvolvedor Full Stack / Analista de Sistemas</h5>
-                                <p class="description">
-                                    Atuando na criação e manutenção do ERP interno da empresa, fazendo levantamento de
-                                    requisitos, documentação com diagrama de fluxo,
-                                    desenvolvimento de modulos para gerenciamento de clientes, emissão de notas fiscais,
-                                    integração com instituições financeiras, comunicação com equipamentos de
-                                    telecomunicações, abertura de
-                                    chamados, estoque e portal do cliente.
-                                    <br><br>
-                                    <i>
-                                        #PHP
-                                        #Bootstrap
-                                        #Git
-                                        #Javascript
-                                        #API_RestFull
-                                        #Postman
-                                        #Yii2_Framework
-                                        #BPMN
-                                        #Python
-                                        #Jquery
-                                    </i>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- end experience section-->
-
-                        <!-- start experience section-->
-                        <div class="timeline">
-                            <div class="icon" data-aos="zoom-in"></div>
-                            <div class="date-content">
-                                <div class="date-outer">
-                                    <span class="date">
-                                            <span class="month">Abr</span>
-                                    <span class="year">2014</span>
+                                            <span class="month">{{experiencia.mes}}</span>
+                                    <span class="year">{{experiencia.ano}}</span>
                                     </span>
                                 </div>
                             </div>
                             <div class="timeline-content" data-aos="zoom-in">
-                                <h5 class="title">DBA / Desenvolvedor Back-End</h5>
+                                <h5 class="title">{{experiencia.title}}</h5>
                                 <p class="description">
-                                    Com aumento da demanda e processamento, atuei na modelagem e manutenção do Banco de
-                                    Dados, criação de SQL's para consultas compostas, criação de serviço
-                                    de comunicação via Web Sockets para gerenciamento de ligações com central
-                                    telefónica, e,
-                                    desenvolvimento de componentes com threads e filas para processamento
-                                    distribuído.
+                                    {{experiencia.text}}
                                     <br><br>
                                     <i>
-                                        #MySQL
-                                        #PostgreSQL
-                                        #SQL
-                                        #Redis
-                                        #Memcached
-                                        #Web_Socket
-                                        #Maillhog
-                                        #RabbitMQ
-                                        #Proxy_Reverso
-                                        #Load_Balance
+                                        {% for tag in experiencia.tags %}
+                                        #{{tag}}
+                                        {% endfor %}
                                     </i>
                                 </p>
                             </div>
                         </div>
-                        <!-- end experience section-->
-
-                        <!-- start experience section-->
-                        <div class="timeline" data-aos="zoom-in">
-                            <div class="icon"></div>
-                            <div class="date-content">
-                                <div class="date-outer">
-                                    <span class="date">
-                                            <span class="month">Jan</span>
-                                    <span class="year">2020</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="timeline-content text-start" data-aos="zoom-in">
-                                <h5 class="title">DevOps / SysAdmin</h5>
-                                <p class="description">
-                                    Instalação, gerenciamento e manutenção de servidores UNIX para aplicações web, API's
-                                    e
-                                    serviços internos de comunicação. Implementado integração continua para deploy
-                                    automático e automatizado infraestrutura com CI/CD, dividindo ambientes de trabalho
-                                    para homologação e produção.
-                                    <br><br>
-                                    <i>
-                                        #Docker
-                                        #Docker_Compose
-                                        #CI_CD
-                                        #Gitlab_Runner
-                                        #Shell_Script
-                                        #Ansible
-                                        #Vagrant
-                                        #Linux
-                                        #Nginx
-                                    </i>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- end experience section-->
-
-                        <!-- start experience section-->
-                        <div class="timeline" data-aos="zoom-in">
-                            <div class="icon"></div>
-                            <div class="date-content">
-                                <div class="date-outer">
-                                    <span class="date">
-                                            <span class="month">Nov</span>
-                                    <span class="year">2020</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="timeline-content" data-aos="zoom-in">
-                                <h5 class="title">Desenvolvedor PHP Pleno</h5>
-                                <p class="description">
-                                    Atuando diretamente com a equipe da Anima Educação <i>(antiga Laureate International
-                                    Universities)</i>
-                                    no sistema de gestão universitária Presencial/EAD. Colaborando na
-                                    análise e levantamento de requisitos para melhorias e soluções,
-                                    desenvolvimento de novas funcionalidades e correções de bugs em framework
-                                    proprietária,
-                                    debugs, melhoria de código e otimização de consultas SQL.
-                                    <br><br>
-                                    <i>
-                                        #PHP7
-                                        #Javascript
-                                        #JQuery
-                                        #HTML5
-                                        #CSS3
-                                        #XDebug
-                                        #PostgreSQL
-                                        #SQL
-                                    </i>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- end experience section-->
-
-                        <!-- start experience section-->
-                        <div class="timeline" data-aos="zoom-in">
-                            <div class="icon"></div>
-                            <div class="date-content">
-                                <div class="date-outer">
-                                    <span class="date">
-                                            <span class="month">Jun</span>
-                                    <span class="year">2021</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="timeline-content text-start" data-aos="zoom-in">
-                                <h5 class="title">Desenvolvedor PHP Sênior</h5>
-                                <p class="description text-start">
-                                    Complementação de documentação, apoio a ambiente local e configurações do projeto,
-                                    versionamento semântico com Git, conhecimentos da
-                                    plataforma Microsoft Azure, ambientes de DEV, QA, HOM, FUN e PRD
-                                    com entrega continua, praticas ágil e conhecimentos em dinâmica de equipe, fluxo de
-                                    chamados/demandas e otimização de
-                                    entrega.
-                                    <br><br>
-                                    <i>
-                                        #Markdown
-                                        #Docker
-                                        #WSL2
-                                        #Git_Flow
-                                        #Linux
-                                        #Scrum
-                                        #VSTS
-                                        #Microsoft_Azure
-                                        #Azure_Repos
-                                    </i>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- end experience section-->
-
+                        {% endfor %}
                     </div>
                 </div>
             </div>

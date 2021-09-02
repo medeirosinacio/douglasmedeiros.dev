@@ -1,0 +1,198 @@
+---
+layout: html_minifier
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+<head>
+    <title>{{ site.title }}</title>
+</head>
+<body cz-shortcut-listen="true">
+<style type="text/css">
+
+    .color-primary {
+        color: #000000 !important;
+    }
+
+    .color-secundary {
+        color: #0a347c !important;
+    }
+
+    .bg-primary {
+        background-color: #ffffff !important;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .bg-secundary {
+        background-color: #0a347c !important;
+        -webkit-print-color-adjust: exact;
+    }
+
+    body {
+        margin: 0 auto !important;
+        padding: 0 !important;
+        width: 800px !important;
+        background-color: #1a1e21 !important;
+        font-family: sans-serif, verdana !important;
+        font-size: 1rem;
+    }
+
+    .page {
+        background-color: white;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 800px !important;
+        height: 1132px !important;
+        margin-bottom: 10px !important;
+        display: block;
+    }
+
+    .col-left {
+        background-color: #0a347c !important;
+        -webkit-print-color-adjust: exact;
+        width: 220px !important;
+        height: 1132px !important;
+        float: left !important;
+    }
+
+    .col-right {
+        width: 580px !important;
+        height: 1132px !important;
+        background-color: #ffffff !important;
+        -webkit-print-color-adjust: exact;
+        float: right !important;
+    }
+
+    h1 {
+        color: #0a347c;
+        margin-bottom: -17px;
+    }
+
+    h2 {
+        padding-left: 2px;
+        color: #292929;
+        font-size: 1.1rem;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    table, tr, td, th {
+        border: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    table {
+        padding-top: 20px !important;
+        padding-left: 30px !important;
+    }
+
+    .wl-100 {
+        width: 580px !important;
+    }
+
+    @page {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 29.7cm !important;
+    }
+
+    @media print {
+        @page {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 29.7cm !important;
+        }
+
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 29.7cm !important;
+            font-family: sans-serif, verdana !important;
+            font-size: 14pt;
+        }
+
+        .page {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 29.7cm !important;
+            height: 42cm !important;
+            display: block;
+        }
+
+        table, tr, td, th {
+            border: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        table {
+            padding-top: 20px !important;
+            padding-left: 30px !important;
+        }
+
+        .col-left {
+            background-color: #0a347c;
+            -webkit-print-color-adjust: exact;
+            width: 8cm !important;
+            height: 42cm !important;
+            float: left !important;
+        }
+
+        .col-right {
+            width: 21.7cm !important;
+            height: 42cm !important;
+            background-color: #ffffff !important;
+            -webkit-print-color-adjust: exact;
+            float: right !important;
+        }
+
+        .wl-100 {
+            width: 21.7cm !important;
+        }
+
+        h2 {
+            font-size: 16pt !important;
+        }
+    }
+
+</style>
+<div class="page">
+    <div class="col-left">
+
+    </div>
+    <div class="col-right">
+        <table class="wl-100">
+            <tr>
+                <td>
+                    <h1>{{ site.author }}</h1>
+                </td>
+            </tr>
+            <tr>
+                <td><h2>{{ site.author_title }}</h2></td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td>eu@douglasmedeiros.dev</td>
+                <td>Porto Alegre / RS</td>
+                <td>a</td>
+                <td>a</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="page">
+    <div class="col-left"></div>
+    <div class="col-right"></div>
+</div>
+<script type="text/javascript">
+    window.onload = function () {
+        document.title = '{{ site.title }}'
+        window.print();
+    }
+</script>
+</body>
+</html>

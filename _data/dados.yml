@@ -1,0 +1,136 @@
+sobre:
+  title: Olá, Eu sou o Douglas
+  sub_title: Desenvolvedor e apaixonado por tecnologia
+  text: Nascido em 93 na cidade de Porto Alegre, e caindo de paraquedas na tecnologia há 10 anos, atuando em
+    múltiplas áreas dentre telecomunicações até sistemas de instituições de ensino. Com Experiências
+    focadas principalmente em <b>PHP</b> e movido por desafios, coparticipei de
+    projetos de infraestrutura, devops, automação, app, mobile, sistemas de gestão empresarial, ERP's,
+    entre outros! Esse ponto de inflexão entre as áreas me possibilitou ter uma visão global de
+    projetos, conseguindo assim contribuir com soluções diversas nos problemas e desafios propostos.
+    <br><br>
+    Implementando melhores práticas de desenvolvimento e contribuindo para a comunidade sempre que
+    possível, viso a qualidade de entrega em projetos sólidos, de alta complexidade, eficientes e documentados.
+    Se está procurando um <a target="_blank" class="text-reset fst-italic"
+    href="https://imasters.com.br/carreira-dev/o-perfil-t-shaped-e-o-dev-full-stack">
+    dev em T</a>, entre em contato, adoraria ouvir sobre seu projeto.
+
+contato:
+  email: medeirosinacio@outlook.com
+  localizacao: Porto Alegre / RS
+  tel: (51) 98402-7498
+  linkedin: medeirosinacio
+  github: medeirosinacio
+
+servicos:
+  - icon: <i class="bi bi-hdd-stack-fill"></i>
+    title: Desenvolvimento
+    text: Sistemas de gestão ERP, CRM, RPA, integrados ou API's complexas com implementação de metodologias ágeis.
+
+  - icon: <i class="bi bi-caret-right-fill"></i><i class="bi bi-caret-right-fill"></i>
+    title: Automação
+    text: Desenvolvimento de sistemas integrados para automação de rotinas e processos.
+
+  - icon: <i class="bi bi-file-bar-graph-fill"></i>
+    title: Analista
+    text: Mapeamento e análise de fluxo de processos para otimização e melhoria de sistemas.
+
+  - icon: <i class="bi bi-signpost-2-fill"></i>
+    title: Website
+    text: Desde blogs com baixo custo até comerciais landpages com domínio e email exclusivo.
+
+  - icon: <i class="bi bi-phone-fill"></i>
+    title: Aplicativo
+    text: Aplicações mobile para integrar sistemas novos ou já existentes, disponível em multiplataformas.
+
+  - icon: <i class="bi bi-asterisk"></i>
+    title: Especificidade
+    text: Tem um projeto muito especifico? alguma automação ou extensão de navegador? tenho certeza que posso ajudar.
+
+experiencias:
+  - ano: 2012
+    mes: Nov
+    title: Desenvolvedor Full Stack / Analista de Sistemas
+    text: Atuando na criação e manutenção do ERP interno da empresa, fazendo levantamento de requisitos, documentação
+      com diagrama de fluxo, desenvolvimento de modulos para gerenciamento de clientes, emissão de notas fiscais,
+      integração com instituições financeiras, comunicação com equipamentos de telecomunicações, abertura de chamados,
+      estoque e portal do cliente.
+    tags:
+      - PHP
+      - Bootstrap
+      - Git
+      - Javascript
+      - API_RestFull
+      - Postman
+      - Yii2_Framework
+      - BPMN
+      - Python
+      - Jquery
+
+  - ano: 2014
+    mes: Abr
+    title: DBA / Desenvolvedor Back-End
+    text: Com aumento da demanda e processamento, atuei na modelagem e manutenção do Banco de Dados, criação de SQL's
+      para consultas compostas, criação de serviço de comunicação via Web Sockets para gerenciamento de ligações com
+      central telefónica, e, desenvolvimento de componentes com threads e filas para processamento distribuído.
+    tags:
+      - MySQL
+      - PostgreSQL
+      - SQL
+      - Redis
+      - Memcached
+      - Web_Socket
+      - Maillhog
+      - RabbitMQ
+      - Proxy_Reverso
+      - Load_Balance
+
+  - ano: 2020
+    mes: Jan
+    title: DevOps / SysAdmin
+    text: Instalação, gerenciamento e manutenção de servidores UNIX para aplicações web, API's e serviços internos de
+      comunicação. Implementado integração continua para deploy automático e automatizado infraestrutura com CI/CD,
+      dividindo ambientes de trabalho para homologação e produção.
+    tags:
+      - Docker
+      - Docker_Compose
+      - CI_CD
+      - Gitlab_Runner
+      - Shell_Script
+      - Ansible
+      - Vagrant
+      - Linux
+      - Nginx
+
+  - ano: 2020
+    mes: Nov
+    title: Desenvolvedor PHP Pleno
+    text: Atuando diretamente com a equipe da Anima Educação (antiga Laureate International Universities) no sistema
+      de gestão universitária Presencial/EAD. Colaborando na análise e levantamento de requisitos para melhorias e
+      soluções, desenvolvimento de novas funcionalidades e correções de bugs em framework proprietária, debugs, melhoria
+      de código e otimização de consultas SQL.
+    tags:
+      - PHP7
+      - Javascript
+      - JQuery
+      - HTML5
+      - CSS3
+      - XDebug
+      - PostgreSQL
+      - SQL
+
+  - ano: 2021
+    mes: Jun
+    title: Desenvolvedor PHP Sênior
+    text: Complementação de documentação, apoio a ambiente local e configurações do projeto, versionamento semântico
+      com Git, conhecimentos da plataforma Microsoft Azure, ambientes de DEV, QA, HOM, FUN e PRD com entrega continua,
+      praticas ágil e conhecimentos em dinâmica de equipe, fluxo de chamados/demandas e otimização de entrega.
+    tags:
+      - Markdown
+      - Docker
+      - WSL2
+      - Git_Flow
+      - Linux
+      - Scrum
+      - VSTS
+      - Microsoft_Azure
+      - Azure_Repos
