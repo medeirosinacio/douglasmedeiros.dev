@@ -1,4 +1,4 @@
-<header id="header" class="w-100 mini">
+<header id="header" class="w-100 d-none mini mini-animation">
     <div class="container w-md-75 px-4 px-md-0 d-flex align-content-center justify-content-between">
         <table class="table-reset logo">
             <tbody>
@@ -10,14 +10,17 @@
                 </td>
                 <td class="fs-7 font-Lato-Black">
                     <a class="text-reset text-decoration-none text-uppercase" title="Home" href="/">Douglas Medeiros</a>&nbsp;
-                    <small class="logo-subtitle text-uppercase font-Lato-Regular fs-8">&nbsp;&nbsp;/&nbsp;<span id="subtitle-logo">Desenvolvedor</span></small>
+                    <small class="logo-subtitle text-uppercase font-Lato-Regular fs-8">
+                        &nbsp;&nbsp;/&nbsp;
+                        <span id="subtitle-logo">Desenvolvedor</span></small>
                 </td>
             </tr>
             </tbody>
         </table>
         <div class="menu align-content-end">
             <div class="menu-icon">
-                <input class="menu-icon__cheeckbox" type="checkbox" />
+                <input class="menu-icon__cheeckbox" type="checkbox" onchange="syncmenu(this)" name="menu"
+                       id="menu-btn"/>
                 <div>
                     <span></span>
                     <span></span>
@@ -26,9 +29,45 @@
         </div>
     </div>
 </header>
+<nav id="menu-container" onclick="closeMenu();">
+    <div id="menu" class="menu">
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start">
+            <li class="nav-item">
+                <a href="#" class="nav-link text-truncate" onclick="closeMenu();">
+                    <span class="ms-1 d-inline">Início</span>
+                </a>
+            </li>
+            <li>
+                <a href="#sobre" data-bs-toggle="collapse" class="nav-link text-truncate" onclick="closeMenu();">
+                    <span class="ms-1 d-inline">Sobre</span>
+                </a>
+            </li>
+            <li>
+                <a href="#servicos" class="nav-link text-truncate" onclick="closeMenu();">
+                    <span class="ms-1 d-inline">Serviços</span>
+                </a>
+            </li>
+            <li>
+                <a href="#github" class="nav-link text-truncate" onclick="closeMenu();">
+                    <span class="ms-1 d-inline">Projetos</span>
+                </a>
+            </li>
+            <li>
+                <a href="#experiencia" class="nav-link text-truncate" onclick="closeMenu();">
+                    <span class="ms-1 d-inline">Experiência</span>
+                </a>
+            </li>
+            <li>
+                <a href="#contato" class="nav-link text-truncate" onclick="closeMenu();">
+                    <span class="ms-1 d-inline">Contato</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
 <div class="menu align-content-end position-absolute">
     <div class="menu-icon">
-        <input class="menu-icon__cheeckbox" type="checkbox" />
+        <input class="menu-icon__cheeckbox" type="checkbox" onchange="syncmenu(this)" name="menu"/>
         <div>
             <span></span>
             <span></span>

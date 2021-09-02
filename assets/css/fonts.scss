@@ -78,3 +78,11 @@
 .font-Lato-Black {
   font-family: "Lato Black", var(--bs-font-sans-serif) !important;
 }
+@font-face {
+  font-family: "Lato Light";
+  src: url("../fonts/Lato/Lato-Light.ttf") format('truetype');
+}
+
+.font-Lato-Light {
+  font-family: "Lato Light", var(--bs-font-sans-serif) !important;
+}

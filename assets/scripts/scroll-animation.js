@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener('aos:in', ({detail}) => {
+    console.log(detail);
     subtitleLogoAnimation(detail, 'in');
 });
 
@@ -43,23 +44,22 @@ function subtitleLogoAnimation(element, type) {
         title = titles[titles.indexOf(title) - 1];
     }
 
-    if (title !== 'Desenvolvedor') {
-        document.getElementById('header').classList.remove('mini');
-        document.getElementById('header').classList.remove('mini-animation');
-        document.getElementById('header').classList.add('animation');
-    }
-
     write(title);
 
 }
 
 setInterval(function () {
-    if (window.scrollY <= 350) {
+    if (window.scrollY <= 350 && !document.getElementById('menu-btn').checked) {
         document.getElementById('header').classList.add('mini');
         document.getElementById('header').classList.add('mini-animation');
         document.getElementById('header').classList.remove('animation');
+    }else{
+        document.getElementById('header').classList.remove('mini');
+        document.getElementById('header').classList.remove('mini-animation');
+        document.getElementById('header').classList.remove('d-none');
+        document.getElementById('header').classList.add('animation');
     }
-}, 1000);
+}, 100);
 
 function numbersAnimation() {
     function animateValue(target, start, end, duration) {

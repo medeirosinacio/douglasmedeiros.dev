@@ -70,13 +70,23 @@ if (typeText) {
 // ./HOME ANIMATION
 
 
-function portifolio() {
-    let radios = document.getElementsByName("portfolio");
-    for (let i = 0; i < radios.length; i++) {
-        if (radios[i].checked) {
-            let view = radios[i].getAttribute("id").replace('port-', '');
-            break;
+function syncmenu(checkbox) {
+    document.getElementsByName('menu').forEach(function (a) {
+        a.checked = checkbox.checked;
+        if (checkbox.checked === true) {
+            document.getElementById('menu-container').classList.add('animation-opac');
+            document.getElementById('menu').classList.add('animation-slide');
+        } else {
+            document.getElementById('menu-container').classList.remove('animation-opac');
+            document.getElementById('menu').classList.remove('animation-slide');
         }
-    }
+    });
 }
 
+function closeMenu() {
+    document.getElementsByName('menu').forEach(function (a) {
+        a.checked = false;
+        document.getElementById('menu-container').classList.remove('animation-opac');
+        document.getElementById('menu').classList.remove('animation-slide');
+    });
+}

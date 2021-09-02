@@ -1,6 +1,6 @@
 header {
   position: fixed;
-  z-index: 1;
+  z-index: 7;
   opacity: 0.97;
   border-bottom: 1px solid #e7e7e7;
   border-bottom: 1px solid #e7e7e7;
@@ -24,7 +24,7 @@ header.animation {
 
 header.mini-animation {
   animation-name: shutter-in-bottom;
-  animation-duration: 0.1s;
+  animation-duration: 0.2s;
   animation-timing-function: ease;
   animation-delay: 0s;
   animation-iteration-count: 1;
@@ -194,27 +194,122 @@ header table {
   }
 }
 
-.menu.position-absolute{
+.menu.position-absolute {
   z-index: 5;
   top: 6rem;
   right: 30%;
   opacity: 0.5;
 }
 
-.menu.position-absolute span{
+.menu.position-absolute span {
   background-color: #919191;
 }
 
 @include media-breakpoint-down(lg) {
-  .menu.position-absolute{
+  .menu.position-absolute {
     top: 3rem;
     right: 16%;
   }
 }
 
 @include media-breakpoint-down(md) {
-  .menu.position-absolute{
+  .menu.position-absolute {
     top: 2rem;
     right: 10%;
+  }
+}
+
+#menu-container.animation-opac{
+  opacity: 1;
+  z-index: 6;
+  background-repeat: repeat;
+  animation-name: opac;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+
+#menu-container {
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  position: fixed;
+  opacity: 0;
+  z-index: -10;
+  background-image: url(/assets/images/fundo_menu.png);
+
+
+  .menu {
+    width: 23%;
+    height: 100vh;
+    float: right;
+    padding: 80px 20px;
+    background-color: #2b2b2b;
+  }
+
+  .menu.animation-slide {
+    animation-name: slide-left;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+  }
+
+  a i {
+    padding-right: 5px;
+  }
+
+  a {
+    color: #c6c6c6;
+    font-size: 1.1rem;
+    @extend .font-Lato-Light;
+  }
+
+  a:hover {
+    color: white;
+  }
+
+  @include media-breakpoint-down(lg) {
+    .menu {
+      width: 35%;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .menu {
+      width: 50%;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .menu {
+      width: 70%;
+    }
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    margin-right: -23%;
+  }
+  100% {
+    margin-right: 0;
+  }
+}
+
+@keyframes opac {
+  0% {
+    opacity: 0;
+    z-index: -10;
+  }
+  100% {
+    opacity: 1;
+    z-index: 6;
   }
 }
