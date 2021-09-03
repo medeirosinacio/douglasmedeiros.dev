@@ -70,3 +70,6 @@ exclude:
   - server.sh
   - LICENSE
   - _drafts
+  - blog
+  - works
+  - portfolio
