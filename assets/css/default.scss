@@ -13,7 +13,7 @@ body.bg-light {
   color: #000;
 }
 
-.bg-dark-blue{
+.bg-dark-blue {
   background-color: #2b3944 !important;
 }
 
@@ -21,7 +21,7 @@ body.bg-light {
   color: #94a6b5 !important;
 }
 
-.bg-semilight{
+.bg-semilight {
   background-color: #E9E9E9;
 }
 
@@ -41,7 +41,7 @@ body.bg-light {
   font-weight: inherit;
 }
 
-.table-reset{
+.table-reset {
   margin: 0;
   padding: 0;
   border-collapse: inherit;
@@ -54,19 +54,19 @@ body.bg-light {
   min-height: 100vh !important;
 }
 
-.h-85vh{
+.h-85vh {
   min-height: 85vh;
 }
 
-.h-75vh{
+.h-75vh {
   min-height: 75vh;
 }
 
-.fs-7{
+.fs-7 {
   font-size: 0.9rem;
 }
 
-.fs-8{
+.fs-8 {
   font-size: 0.8rem;
 }
 
@@ -78,12 +78,12 @@ body.bg-light {
   @extend .text-primary;
 }
 
-p{
+p {
   font-size: 1rem;
 }
 
 @include media-breakpoint-down(lg) {
-  p{
+  p {
     font-size: 0.9rem;
   }
 }
@@ -114,6 +114,7 @@ p{
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
 }
+
 // .BLOG
 
 // button icon load /contato
