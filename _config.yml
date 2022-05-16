@@ -1,6 +1,6 @@
 # General
 title: Douglas Medeiros - Desenvolvedor
-email: medeirosinacio@outlook.com
+email: eu@douglasmedeiros.dev
 source: .
 destination: ./public
 baseurl: ""
@@ -14,11 +14,11 @@ google_analytics: "" # UA-111111111-1
 published: true
 
 # Staticforms form contact email
-staticforms_api_key: 2e54f1be-9b64-4dff-9a0b-91f24b3aae96 # contato-douglasmedeiros.dev@outlook.com
+staticforms_api_key: 5c55290e-9f02-4fc5-8ae5-40a200bf34c5
 
 # Paginator configuration
 paginate: 6
-paginate_path: "/blog/pagina/:num"
+paginate_path: "/blog/pagina/:num" dff
 
 # disqus comment
 disqus_api_url: douglasmedeiros-dev.disqus.com
