@@ -18,7 +18,7 @@ staticforms_api_key: 5c55290e-9f02-4fc5-8ae5-40a200bf34c5
 
 # Paginator configuration
 paginate: 6
-paginate_path: "/blog/pagina/:num" dff
+paginate_path: "/blog/pagina/:num"
 
 # disqus comment
 disqus_api_url: douglasmedeiros-dev.disqus.com
