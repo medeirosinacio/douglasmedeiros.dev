@@ -36,7 +36,7 @@ servicos:
 
   - icon: <i class="bi bi-signpost-2-fill"></i>
     title: Website
-    text: Desde blogs com baixo custo até comerciais landpages com domínio e email exclusivo.
+    text: Desde blogs com baixo custo até comerciais landing page com domínio e email exclusivo.
 
   - icon: <i class="bi bi-phone-fill"></i>
     title: Aplicativo
@@ -50,8 +50,8 @@ experiencias:
   - ano: 2012
     mes: Nov
     title: Desenvolvedor Full Stack / Analista de Sistemas
-    text: Atuando na criação e manutenção do ERP interno da empresa, fazendo levantamento de requisitos, documentação
-      com diagrama de fluxo, desenvolvimento de modulos para gerenciamento de clientes, emissão de notas fiscais,
+    text: Atuando na criação e manutenção do ERP interno da empresa <a target="_blank" class="text-reset fst-italic" href="https://masternetrs.com.br/">Masternet Telecom</a>,
+      fazendo levantamento de requisitos, documentação com diagrama de fluxo, desenvolvimento de modulos para gerenciamento de clientes, emissão de notas fiscais,
       integração com instituições financeiras, comunicação com equipamentos de telecomunicações, abertura de chamados,
       estoque e portal do cliente.
     tags:
@@ -71,7 +71,7 @@ experiencias:
     title: DBA / Desenvolvedor Back-End
     text: Com aumento da demanda e processamento, atuei na modelagem e manutenção do Banco de Dados, criação de SQL's
       para consultas compostas, criação de serviço de comunicação via Web Sockets para gerenciamento de ligações com
-      central telefónica, e, desenvolvimento de componentes com threads e filas para processamento distribuído.
+      central telefônica, e, desenvolvimento de componentes com threads e filas para processamento distribuído.
     tags:
       - MySQL
       - PostgreSQL
@@ -79,7 +79,7 @@ experiencias:
       - Redis
       - Memcached
       - Web_Socket
-      - Maillhog
+      - Mailhog
       - RabbitMQ
       - Proxy_Reverso
       - Load_Balance
@@ -104,7 +104,7 @@ experiencias:
   - ano: 2020
     mes: Nov
     title: Desenvolvedor PHP Pleno
-    text: Atuando diretamente com a equipe da Anima Educação (antiga Laureate International Universities) no sistema
+    text: Atuando diretamente com a equipe da <a target="_blank" class="text-reset fst-italic" href="https://animaeducacao.com.br/">Anima Educação</a> (antiga Laureate International Universities) no sistema
       de gestão universitária Presencial/EAD. Colaborando na análise e levantamento de requisitos para melhorias e
       soluções, desenvolvimento de novas funcionalidades e correções de bugs em framework proprietária, debugs, melhoria
       de código e otimização de consultas SQL.
@@ -134,3 +134,23 @@ experiencias:
       - VSTS
       - Microsoft_Azure
       - Azure_Repos
+
+  - ano: 2021
+    mes: Out
+    title: Desenvolvimento de projetos
+    text: Com a <a target="_blank" class="text-reset fst-italic" href="https://dump.tec.br">Dump Tecnologia</a> atuo com
+      diversos clientes de todo país, aplicando tecnologias e implementações em software e automação de processos, bem como,
+      desenvolvimento de sistema para monitoramento e gerenciamento de tarefas, API para consumo externo de serviços,
+      arquitetura para gestão de tarefas, rotinas por status e restore utilizando as boas praticas da comunidade e
+      automação de processos manuais via script.
+    tags:
+      - Laravel
+      - Lumen
+      - RPA
+      - Selenoid
+      - PHP_Unit
+      - Jira
+      - AWS
+      - SOLID
+      - REST_FULL
+      - API
