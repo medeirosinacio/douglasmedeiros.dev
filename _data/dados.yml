@@ -138,7 +138,7 @@ experiencias:
   - ano: 2021
     mes: Out
     title: Desenvolvimento de projetos
-    text: Com a <a target="_blank" class="text-reset fst-italic" href="https://dump.tec.br">Dump Tecnologia</a> atuo com
+    text: Com a <a target="_blank" class="text-reset fst-italic" href="https://dump.tec.br">Dump Tecnologia</a> atuei com
       diversos clientes de todo país, aplicando tecnologias e implementações em software e automação de processos, bem como,
       desenvolvimento de sistema para monitoramento e gerenciamento de tarefas, API para consumo externo de serviços,
       arquitetura para gestão de tarefas, rotinas por status e restore utilizando as boas praticas da comunidade e
@@ -150,7 +150,26 @@ experiencias:
       - Selenoid
       - PHP_Unit
       - Jira
-      - AWS
       - SOLID
       - REST_FULL
       - API
+
+  - ano: 2022
+    mes: Abr
+    title: Desenvolvedor Sênior Full-Stack
+    text: Junto a <a target="_blank" class="text-reset fst-italic" href="https://totalexpress.com.br/">Total Express</a> 
+      no setor de Logística na área Last Mile, desenvolvendo e aplicando soluções na ultima etapa de entrega e logística 
+      reversa. Correções e melhorias em sistemas distribuídos, sustentação e revisão de código de sistemas antigos, 
+      implementação testes e aplicação de pipelines de análise de código. Criação de scripts para funções assíncronas 
+      na nuvem, desenho de soluções e criação de padrões para boas práticas de desenvolvimento na squad.
+    tags:
+      - CodeIgniter
+      - Symfony
+      - BitBucket
+      - Stubs
+      - PHPStan
+      - AWS_Lambda
+      - AWS_SQS
+      - C4_Model
+      - PHPFIG
+      - SQL_Style
