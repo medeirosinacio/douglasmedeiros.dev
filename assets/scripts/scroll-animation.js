@@ -131,87 +131,6 @@ function calculateAnimationInterval(currentValue, targetValue) {
     return Math.floor((diff / 50) * speedMultiplier);
 }
 
-function getContributionsTotal() {
-    const cacheKey = 'douglasmedeiros.commits';
-
-    // Verifica se o valor já está em cache
-    const cachedValue = getCache(cacheKey);
-    if (cachedValue !== null) {
-        return Promise.resolve(parseInt(cachedValue));
-    }
-
-    // Faz a requisição à API
-    return fetch('https://api.allorigins.win/raw?url=https://github-contributions.vercel.app/api/v1/medeirosinacio')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Calcula a soma total do campo "total" de todos os "years"
-            let total = 0;
-            data.years.forEach(year => {
-                total += year.total;
-            });
-
-            total = total + 800;
-
-            // Armazena o valor obtido em cache
-            setCache(cacheKey, total, 5);
-            updateCommits(total);
-
-        })
-        .catch(error => {
-            console.error('Error fetching contributions total:', error);
-        });
-}
-
-
-function updateCommits(value = 3080) {
-    const githubPersonal = getCache('douglasmedeiros.commits');
-    const githubPersonalProjects = Number.isInteger(githubPersonal) ? githubPersonal : value;
-
-    const input = document.getElementById('count-commits');
-    input.setAttribute('data-number', githubPersonalProjects);
-
-    if (value === 3080) {
-        getContributionsTotal();
-    }
-}
-
-async function getGitHubPersonalProjects() {
-    const url = 'https://api.allorigins.win/raw?url=https://github.com/medeirosinacio?tab=repositories';
-    const response = await fetch(url);
-    if (!response.ok) throw new Error('Failed to fetch GitHub personal projects');
-    const html = await response.text();
-    const parser = new DOMParser();
-    const htmlDoc = parser.parseFromString(html, 'text/html');
-    const element = htmlDoc.querySelector('a[href="/medeirosinacio?tab=repositories"] > span');
-    const githubPersonal = Number.parseInt(element?.textContent) || 20;
-    if (githubPersonal !== 20) {
-        setCache('douglasmedeiros.projects', githubPersonal, 5);
-        updateProjects(githubPersonal);
-    }
-}
-
-function updateProjects(value = 20) {
-    const githubPersonal = getCache('douglasmedeiros.projects');
-    const githubPersonalProjects = Number.isInteger(githubPersonal) ? githubPersonal : value;
-
-    const gitlabProjectsLegacy = 14;
-    const githubProjects = 33;
-    const totalProjects = gitlabProjectsLegacy + githubProjects + githubPersonalProjects;
-
-    const input = document.getElementById('count-projects');
-    input.setAttribute('data-number', totalProjects);
-
-    if (value === 20) {
-        getGitHubPersonalProjects();
-    }
-}
-
-
 function updateCoffe() {
 
     function calculateCoffeeSinceDate(dateString) {
@@ -235,6 +154,4 @@ function updateCoffe() {
 
 function updateSobreValues() {
     updateCoffe();
-    updateCommits();
-    updateProjects();
 }
