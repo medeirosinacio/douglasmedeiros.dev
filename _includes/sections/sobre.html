@@ -27,27 +27,21 @@
 
                     <div class="col-6 col-lg-3 col-xl-6 px-0 px-lg-3">
                         <div class="count-item py-4 text-start font-Hind-SemiBold fs-2">
-                            <div class="numscroller" data-number="31">0</div>
+                            <div class="numscroller" data-number="71" id="count-projects">0</div>
                             <div class="count-name-intro">Projetos</div>
                         </div>
                     </div>
 
                     <div class="col-6 col-lg-3 col-xl-6 ">
                         <div class="count-item py-4 text-start font-Hind-SemiBold fs-2">
-                            <div class="numscroller" data-number="1474">0</div>
+                            <div class="numscroller" data-number="3322" id="count-commits">1500</div>
                             <div class="count-name-intro">Commits</div>
                         </div>
                     </div>
 
-                    {% assign today = site.time | date: '%s' %}
-                    {% assign start = '01-11-2012 00:00:00' | date: '%s' %}
-                    {% assign secondsSince = today | minus: start %}
-                    {% assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60 %}
-                    {% assign daysSince = hoursSince | divided_by: 24 %}
-
                     <div class="col-6 col-lg-3 col-xl-6 px-0 px-lg-3">
                         <div class="count-item py-4 text-start font-Hind-SemiBold fs-2">
-                            <div class="numscroller" data-number="{{ daysSince | times: 1.8 }}">0</div>
+                            <div class="numscroller" data-number="6818" id="count-coffe">3000</div>
                             <div class="count-name-intro">Copos de café</div>
                         </div>
                     </div>

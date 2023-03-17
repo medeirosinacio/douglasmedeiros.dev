@@ -1,33 +1,26 @@
 function setCache(c_name, value, exdays = 0) {
-    let xmlHttp = new XMLHttpRequest();
-    let cookie = getCache(c_name);
-    if (cookie === null) {
-        xmlHttp.open('GET',
-            "https://api.countapi.xyz/create?update_upperbound=10000&key=" + c_name + "&namespace=medeirosinacio&value=" + value);
-        xmlHttp.send(null);
-        return;
-    }
-
-    xmlHttp.open('GET',
-        "https://api.countapi.xyz/update/medeirosinacio/" + c_name + "?amount=" + (value - cookie));
-    xmlHttp.send(null);
-
+    const cacheKey = `medeirosinacio-${c_name}`;
+    const expirationDate = exdays > 0 ? new Date(Date.now() + exdays * 24 * 60 * 60 * 1000).getTime() : 0;
+    const cacheValue = {
+        value,
+        expirationDate,
+    };
+    localStorage.setItem(cacheKey, JSON.stringify(cacheValue));
 }
 
 function getCache(c_name) {
-    let response = JSON.parse(httpGet("https://api.countapi.xyz/info/medeirosinacio/" + c_name));
-    return response.value;
+    const cacheKey = `medeirosinacio-${c_name}`;
+    const cacheValue = localStorage.getItem(cacheKey);
+    if (cacheValue !== null) {
+        const { value, expirationDate } = JSON.parse(cacheValue);
+        if (expirationDate === 0 || expirationDate > Date.now()) {
+            return Number(value);
+        }
+        localStorage.removeItem(cacheKey);
+    }
+    return null;
 }
 
-function httpGet(theUrl, return_headers) {
-    let xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", theUrl, false);
-    xmlHttp.send(null);
-    if (return_headers) {
-        return xmlHttp;
-    }
-    return xmlHttp.responseText;
-}
 
 // HOME ANIMATION
 let typeText = document.querySelector(".typeText");
