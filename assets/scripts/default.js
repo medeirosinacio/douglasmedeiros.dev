@@ -14,7 +14,7 @@ function getCache(c_name) {
     if (cacheValue !== null) {
         const { value, expirationDate } = JSON.parse(cacheValue);
         if (expirationDate === 0 || expirationDate > Date.now()) {
-            return Number(value);
+            return parseInt(value);
         }
         localStorage.removeItem(cacheKey);
     }
