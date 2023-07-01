@@ -157,10 +157,10 @@ experiencias:
   - ano: 2022
     mes: Abr
     title: Desenvolvedor Sênior Full-Stack
-    text: Junto a <a target="_blank" class="text-reset fst-italic" href="https://totalexpress.com.br/">Total Express</a> 
-      no setor de Logística na área Last Mile, desenvolvendo e aplicando soluções na ultima etapa de entrega e logística 
-      reversa. Correções e melhorias em sistemas distribuídos, sustentação e revisão de código de sistemas antigos, 
-      implementação testes e aplicação de pipelines de análise de código. Criação de scripts para funções assíncronas 
+    text: Junto a <a target="_blank" class="text-reset fst-italic" href="https://totalexpress.com.br/">Total Express</a>
+      no setor de Logística na área Last Mile, desenvolvendo e aplicando soluções na ultima etapa de entrega e logística
+      reversa. Correções e melhorias em sistemas distribuídos, sustentação e revisão de código de sistemas antigos,
+      implementação testes e aplicação de pipelines de análise de código. Criação de scripts para funções assíncronas
       na nuvem, desenho de soluções e criação de padrões para boas práticas de desenvolvimento na squad.
     tags:
       - CodeIgniter
@@ -173,3 +173,16 @@ experiencias:
       - C4_Model
       - PHPFIG
       - SQL_Style
+
+  - ano: 2023
+    mes: Mar
+    title: Engenheiro de Software
+    text: <a target="_blank" class="text-reset fst-italic" href="https://picpay.com/">PicPay 💚</a>
+    tags:
+      - Hyper_F
+      - Swoole
+      - New_Relic
+      - Java
+      - Spring_Bot
+      - Aurora_DB
+      - Kafka
