@@ -5,7 +5,7 @@
   right: 0;
   z-index: -3;
   position: fixed;
-  background-image: url("/assets/gifs/bg-home.gif");
+  background-image: url("/assets/images/bg-home.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -230,7 +230,7 @@ main.home .container {
   -webkit-box-shadow: 0 0 0 1000px var(--bs-dark) inset !important;
 }
 
-.home-contato .staticform #submitErrorBox{
+.home-contato .staticform #submitErrorBox {
   color: #dd3939;
 }
 
@@ -276,34 +276,34 @@ main.home .container {
   animation-duration: 0s;
 }
 
-.home-contato{
+.home-contato {
   $circle-length: 51px;
   $check-length: 36px;
   overflow-x: hidden;
 
   .success-message .card .card-footer,
   .success-message .card .card-header,
-  .success-message .card{
+  .success-message .card {
     background-color: transparent;
     border: 0;
   }
 
-  .success-message .card .card-header{
+  .success-message .card .card-header {
     font-size: 2rem;
     color: #454545;
     cursor: pointer;
   }
 
-  .success-message .card .card-footer{
+  .success-message .card .card-footer {
     margin-top: -28px;
     padding: 0;
   }
 
-  .success-message .card .card-header:hover{
+  .success-message .card .card-header:hover {
     color: #6d6d6d;
   }
 
-  .success-message .card .card-body svg{
+  .success-message .card .card-body svg {
     height: 250px;
   }
 

@@ -2,8 +2,7 @@ function setCache(c_name, value, exdays = 0) {
     const cacheKey = `medeirosinacio-${c_name}`;
     const expirationDate = exdays > 0 ? new Date(Date.now() + exdays * 24 * 60 * 60 * 1000).getTime() : 0;
     const cacheValue = {
-        value,
-        expirationDate,
+        value, expirationDate,
     };
     localStorage.setItem(cacheKey, JSON.stringify(cacheValue));
 }
@@ -12,7 +11,7 @@ function getCache(c_name) {
     const cacheKey = `medeirosinacio-${c_name}`;
     const cacheValue = localStorage.getItem(cacheKey);
     if (cacheValue !== null) {
-        const { value, expirationDate } = JSON.parse(cacheValue);
+        const {value, expirationDate} = JSON.parse(cacheValue);
         if (expirationDate === 0 || expirationDate > Date.now()) {
             return parseInt(value);
         }
@@ -83,3 +82,11 @@ function closeMenu() {
         document.getElementById('menu').classList.remove('animation-slide');
     });
 }
+
+function loadHighResImage(elem, highResUrl) {
+    let image = new Image();
+    image.addEventListener('load', () => elem.setAttribute('style', 'background-image: url("' + highResUrl + '") !important'));
+    image.src = highResUrl;
+}
+
+loadHighResImage(document.getElementById('bg-home-gif'), '/assets/gifs/bg-home.gif');
