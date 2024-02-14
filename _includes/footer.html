@@ -3,7 +3,12 @@
         <div class="row">
             <div class="col-12 text-center">
                 <div class="small m-0 text-white text-center">
-                    Copyright © {{ site.time | date: '%Y' }} Douglas Medeiros <br>
+                    Copyright © <span id="copyright-year">
+                    <script>
+                        document.getElementById('copyright-year').innerHTML = new Date().getFullYear();
+                    </script>
+                </span> Douglas Medeiros
+                    <br>
                     <div class="small font-Lato">
                         Hospedado gratuitamente ❤ com&emsp13;
                         <a href="https://pages.github.com/" class="text-decoration-none text-reset">
