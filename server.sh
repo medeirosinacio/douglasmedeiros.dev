@@ -1,4 +1,5 @@
 #!/bin/bash
+
 docker run -ti --rm \
   -v ./:/app \
   -w /app \
@@ -7,4 +8,4 @@ docker run -ti --rm \
   -p 4000:4000 \
   -p 35729:35729 \
   jekyll/builder:3.8 \
-  /bin/bash -c "bundle install --path=./.gem-cache && bundle exec jekyll serve --host 0.0.0.0 --livereload"
+  /bin/bash -c "bundle install --path=./.gem-cache && bundle exec jekyll serve --force_polling --host 0.0.0.0 --livereload"
