@@ -84,27 +84,27 @@ main.home .container {
   transform: rotateY(180deg);
 }
 
-.home-social-links-media a span i:before {
+.home-social-links-media a span i:before, .home-social-links-media a span {
   transition: transform 0.15s;
   transform-style: preserve-3d;
 }
 
-.home-social-links-media a:hover span i:before {
+.home-social-links-media a:hover span i:before, .home-social-links-media a:hover span {
   transform: rotateY(180deg);
 }
 
 .home-social-links-media span {
   width: 30px;
-  height: 30px;
+  height: 26px;
   display: table-cell;
-  border-radius: 50%;
   vertical-align: middle;
   text-align: center;
 }
 
-.home-social-links-media span i {
+.home-social-links-media span {
   color: #b3b3b3 !important;
   font-size: 1.25em !important;
+  background-size: 1.2em !important;
 }
 
 .home-sobre .descricao h2 {
@@ -124,14 +124,14 @@ main.home .container {
   transform: rotateY(180deg);
 }
 
-.sobre-social-links-media a span i:before {
+.sobre-social-links-media a span i:before, .sobre-social-links-media a span {
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   transform-style: preserve-3d;
   animation-fill-mode: forwards;
 }
 
-.sobre-social-links-media a:hover span i:before {
+.sobre-social-links-media a:hover span i:before, .sobre-social-links-media a:hover span {
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   animation-duration: 0.1s;
@@ -141,9 +141,12 @@ main.home .container {
   animation-fill-mode: forwards;
 }
 
-.sobre-social-links-media span i {
+.sobre-social-links-media span {
+  height: 18px;
+  width: 25px;
   @extend .text-dark;
   font-size: 1.25em !important;
+  background-size: 1.15em !important;
 }
 
 .home-sobre .numscroller {
@@ -249,9 +252,11 @@ main.home .container {
 .home-contato .find-widget a i {
   margin-right: 10px;
   font-size: 1.2rem;
+  width: 20px;
+  height: 18px;
 }
 
-.home-contato .find-widget a:hover i:before {
+.home-contato .find-widget a:hover i:before, .home-contato .find-widget a:hover i {
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   animation-duration: 0.1s;
