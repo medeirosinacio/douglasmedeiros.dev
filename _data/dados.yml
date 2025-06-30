@@ -15,7 +15,7 @@ sobre:
     dev em T</a>, entre em contato, adoraria ouvir sobre seu projeto.
 
 contato:
-  email: medeirosinacio@outlook.com
+  email: eu@douglasmedeiros.dev
   localizacao: Porto Alegre / RS
   tel: (51) 98402-7498
   linkedin: medeirosinacio
@@ -186,3 +186,21 @@ experiencias:
       - Spring_Bot
       - Aurora_DB
       - Kafka
+
+  - ano: 2025
+    mes: Fev
+    title: Tech Lead
+    text: 🚀
+    tags:
+      - Kafka_Connect
+      - Dynatrace
+      - Microservices
+      - Kubernetes
+      - AWS_SNS
+
+  - ano: 2025
+    mes: Jun
+    title: Skill Lead PHP
+    text: 🐘
+    tags:
+      - PHP8

@@ -20,7 +20,7 @@ setup-x86: ## Setup the project for x86
       /bin/bash -c "bundle install --path=./.gem-cache && bundle exec jekyll serve --force_polling --host 0.0.0.0 --livereload"
 
 setup-arm: ## Setup the project for ARM
-	docker run -it --rm \
+	docker run --rm \
 	  --name douglasmedeiros.dev \
       -v ./:/app \
       -w /app \

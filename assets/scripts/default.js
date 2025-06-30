@@ -24,7 +24,7 @@ function getCache(c_name) {
 // HOME ANIMATION
 let typeText = document.querySelector(".typeText");
 if (typeText) {
-    let textToBeTypedArr = ["e Analista", "e Devops", "e Curioso", "", "", "", "", "", "", ""];
+    let textToBeTypedArr = ["e Tech Lead", "e Criado de Conteúdo", "e Skill Lead PHP", "e Palestrante", "e Curioso", "e Fã do PHP", "", "", "", "", ""];
     let index = 0;
     let isAdding = true;
     let textToBeTypedIndex = 0;
@@ -56,7 +56,7 @@ if (typeText) {
 
     setTimeout(function () {
         playAnim();
-    }, 8000);
+    }, 5000);
 }
 
 // ./HOME ANIMATION
