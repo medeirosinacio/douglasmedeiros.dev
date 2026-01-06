@@ -1408,3 +1408,20 @@ url("./fonts/bootstrap-icons.woff?856008caa5eb66df68595e734e59580d") format("wof
 .icon-black {
   background-image: url("/assets/icons/bluesky-logo-black.svg") !important;
 }
+
+.bi-blogger {
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  vertical-align: -.125em;
+  background-color: currentColor;
+  -webkit-mask-image: url("/assets/icons/blogger.svg");
+  mask-image: url("/assets/icons/blogger.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
