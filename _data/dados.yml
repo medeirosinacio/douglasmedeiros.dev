@@ -1,21 +1,18 @@
 sobre:
   title: Olá, Eu sou o Douglas
-  sub_title: Desenvolvedor e apaixonado por tecnologia
-  text: Nascido em 93 na cidade de Porto Alegre, e caindo de paraquedas na tecnologia há 10 anos, atuando em
-    múltiplas áreas dentre telecomunicações até sistemas de instituições de ensino. Com Experiências
-    focadas principalmente em <b>PHP</b> e movido por desafios, coparticipei de
-    projetos de infraestrutura, devops, automação, app, mobile, sistemas de gestão empresarial, ERP's,
-    entre outros! Esse ponto de inflexão entre as áreas me possibilitou ter uma visão global de
-    projetos, conseguindo assim contribuir com soluções diversas nos problemas e desafios propostos.
+  sub_title: Engenharia de Software com Alta Performance
+  text: Engenheiro de Software Sênior no PicPay, onde atuo como Tech Lead e PHP Skill Lead, com foco em alta
+    performance, escalabilidade e sistemas que lidam com bilhões de registros. Minha trajetória na tecnologia começou
+    há mais de uma década, passando por telecom, sistemas de ensino e logística — o que me deu uma visão ampla sobre
+    desenvolvimento de software, infraestrutura e automações de ponta a ponta.
     <br><br>
-    Implementando melhores práticas de desenvolvimento e contribuindo para a comunidade sempre que
-    possível, viso a qualidade de entrega em projetos sólidos, de alta complexidade, eficientes e documentados.
-    Se está procurando um <a target="_blank" class="text-reset fst-italic"
-    href="https://imasters.com.br/carreira-dev/o-perfil-t-shaped-e-o-dev-full-stack">
-    dev em T</a>, entre em contato, adoraria ouvir sobre seu projeto.
+    Implementando melhores práticas de desenvolvimento, curioso, autodidata e com aquela vontade de resolver problemas
+    complexos. Apaixonado por PHP, sou criador de conteúdo no
+    <a href="https://blog.douglasmedeiros.dev" title="Visitar blog" target="_blank" class="text-reset font-Lato-Bold">meu blog</a>,
+    ativo na comunidade PHP, palestrante e consultor técnico para times que buscam mais eficiência e qualidade nas entregas.
 
 contato:
-  email: medeirosinacio@outlook.com
+  email: eu@douglasmedeiros.dev
   localizacao: Porto Alegre / RS
   tel: (51) 98402-7498
   linkedin: medeirosinacio
@@ -187,17 +184,24 @@ experiencias:
       - Aurora_DB
       - Kafka
 
-  - ano: 2026
-    mes: Mai
-    title: Tech Manager
-    text: <a target="_blank" class="text-reset fst-italic" href="https://picpay.com/">PicPay 💚</a>
+  - ano: 2025
+    mes: Fev
+    title: Tech Lead
+    text: 🚀
     tags:
-      - Lideranca
-      - Gestao
-      - Arquitetura
-      - Mentoria
-      - Estrategia
-      - People_Management
+      - Kafka_Connect
+      - Dynatrace
+      - Microservices
+      - Kubernetes
+      - AWS_SNS
+
+  - ano: 2025
+    mes: Jun
+    title: Skill Lead PHP
+    text: 🐘
+    tags:
+      - PHP8
+
 
   - ano: 2026
     mes: Mai
